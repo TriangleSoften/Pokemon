@@ -305,10 +305,24 @@ def attempt (request):
         if(email!=email2):
         	return HttpResponseRedirect('/register/failattempt/?id=email')
 
-        with connection.cursor() as cursor:
-            cursor.execute("INSERT INTO userdata (username, password, firstname, lastname, email, gender, dateofbirth, phonenum) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)", (username, password, firstname, lastname, email, gender, dateofbirth, phonenum))
+        try:
+        	user = regUsers.objects.get(username = username)
+        	return HttpResponseRedirect('/register/failattempt/?id=user')
+        except :
+        	print ""
 
-    return HttpResponseRedirect('/login/')
+
+        try:
+        	user = regUsers.objects.get(email = email)
+        	return HttpResponseRedirect('/register/failattempt/?id=email2')
+        except :
+        	print ""
+
+			
+        with connection.cursor() as cursor:
+           	cursor.execute("INSERT INTO userdata (username, password, firstname, lastname, email, gender, dateofbirth, phonenum) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)", (username, password, firstname, lastname, email, gender, dateofbirth, phonenum))
+
+    	return HttpResponseRedirect('/login/')
 
 
 def failattempt (request):
@@ -319,6 +333,10 @@ def failattempt (request):
 		msg = "Both password must be the same"
 	elif _id == 'email':
 		msg = "Both email must be the same"
+	elif _id == 'user':
+		msg = "Username already in use"
+	elif _id == 'email2':
+		msg = "Email already in use"
 
 	page = '''	
 				<!DOCTYPE html>

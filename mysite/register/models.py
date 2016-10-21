@@ -11,7 +11,7 @@ class regUsers(models.Model):
 	lastname = models.CharField(max_length=45)
 	email = models.CharField(max_length=45)
 	gender = models.CharField(max_length=45)
-	dateofbrith = models.CharField(max_length=45)
+	dateofbirth = models.CharField(max_length=45)
 	phonenum = models.CharField(max_length=45)
 
 	class Meta:
