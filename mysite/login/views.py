@@ -2,8 +2,9 @@ from django.shortcuts import HttpResponse
 from django.shortcuts import HttpResponseRedirect
 from django.views.decorators.csrf import csrf_exempt
 from django.db import connection
-from models import Users
 from django.conf import settings
+from login.models import logUsers
+
 
 def index(request):
 	page = '''	
@@ -67,11 +68,11 @@ def attempt(request):
 
 
 	try:
-		user = Users.objects.get(username = useratt)
+		user = logUsers.objects.get(username = useratt)
 		print(user.username)
 		print(user.password)
 		if user.password == passatt:
-			return HttpResponseRedirect('/login/')
+			return HttpResponseRedirect('/login/') # succress login 
 		else:
 			return HttpResponseRedirect('/login/failattempt/') 
 	except:
