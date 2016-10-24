@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
 </head>
 
-<body style="background-image: url('https://wallpaperscraft.com/image/dark_background_line_surface_65896_602x339.jpg')">
+<body style="background-image: url('/static/img/mainpic/background.jpg')">
   <header class="container">
     <div class="row">
       <h1 class="col-sm-8" style="color: orange">Triangle</h1>
@@ -22,7 +22,7 @@
       </nav>
     </div>
   </header>
-  <section class="jumbotron">
+  <section class="jumbotron" style="background-image: url('/static/img/mainpic/Loreal.jpg');">
     <div class="container">
       <div class="row text-center">
         <h2>Triangle Cosmetic</h2>
@@ -33,19 +33,25 @@
   </section>
   <section class="container">
     <div class="row" style="color: orange;" >
+    <div class="row-xs-height">
     {% for obj in object_list %}
-    	{% ifequal obj.Pamount 0 %}
-      		<div class="col-sm-3">
-        		<p>
-        			{{ obj.Pname }}<br/>
-					{{ obj.Ptype }}<br/>
-					{{ obj.Pbrand }}<br/>
-					{{ obj.Pprice }}<br/>
+      		<div class="col-xs-4 col-height" style="height: 600px;">
+        		<p style="height: 160px;">
+                <span style="color: white">ProductID : </span>#{{ obj.Pid }}<br/>
+        			 <span style="color: white">Product : </span>{{ obj.Pname }}<br/>
+               <span style="color: white">Brand : </span>{{ obj.Pbrand }}<br/>
+					     <span style="color: white">Type : </span>{{ obj.Ptype }}<br/>
+					     <span style="color: white">Price : </span>{{ obj.Pprice }}<span style="color: white"> THB</span><br/>
+               {% ifequal obj.Pamount 0 %}
+                <span style="color: white">Stock : </span> <span style="color: red">Sold out </span> <br/>
+                {% else %}
+                <span style="color: white">Stock : </span> <span style="color: #02c902;">In Stock </span> <br/>
+                {% endifequal %}
         		</p>
-				<img src="{{ obj.Ppicture }}" >
+				    <img src="/static/img/Photo_Product/{{ obj.Ppicture }}" />
       		</div>
-    	{% endifequal %}
     {% endfor %}
+    </div>
     </div>
     <!--<div class="row text-center">
       <a class="btn btn-secondary" href="#">View Complete Catalogue</a>

@@ -6,7 +6,7 @@
 
 
   <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" href="/static/css/codeb.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/codebcatalog.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
 </head>
 
@@ -22,7 +22,7 @@
       </nav>
     </div>
   </header>
-  <section class="jumbotron">
+  <section class="jumbotron" style="background-image: url('/static/img/mainpic/Fragrance.jpg');">
     <div class="container">
       <div class="row text-center">
         <h2>Triangle Cosmetic</h2>
@@ -33,49 +33,27 @@
   </section>
   <section class="container">
     <div class="row" style="color: orange;" >
-      <div class="col-sm-6">
-        <p>All</p>
-        <a href="">
-          <img src="/static/img/mainpic/All.jpg" class="hover" />
-          <span class="text-content"><span><h1>All</h1></span></span>
-        </a>
-      </div>
-      <div class="col-sm-6">
-        <p>SkinCare</p>
-        <a href="">
-          <img src="/static/img/mainpic/Skincare.jpg" class="hover" />
-          <span class="text-content"><span><h1>SkinCare</h1></span></span>
-        </a>
-      </div>
-      <div class="col-sm-6">
-        <p>Base Makeup</p>
-        <a href="">
-          <img src="/static/img/mainpic/BaseMakeup.jpg" class="hover" />
-          <span class="text-content"><span><h1>Base Makeup</h1></span></span>
-        </a>
-      </div>
-      <div class="col-sm-6">
-        <p>Point Makeup</p>
-        <a href="">
-          <img src="/static/img/mainpic/PointMakeup.jpg" class="hover" />
-          <span class="text-content"><span><h1>Point Makeup</h1></span></span>
-        </a>
-      </div>
-      <div class="col-sm-6">
-        <p>Accessories</p>
-        <a href="">
-          <img src="/static/img/mainpic/Accessories.jpg" class="hover" />
-          <span class="text-content"><span><h1>Accessories</h1></span></span>
-        </a>
-      </div>
-      <div class="col-sm-6">
-        <p>Fragrance</p>
-        <a href="">
-          <img src="/static/img/mainpic/Fragrance.jpg" class="hover" />
-          <span class="text-content"><span><h1>Fragrance</h1></span></span>
-        </a>
-      </div>
-      
+    <div class="row-xs-height">
+    {% for obj in object_list %}
+    {% ifequal obj.Ptype 'Fragrance'%}
+      		<div class="col-xs-4 col-height" style="height: 600px;">
+        		<p style="height: 160px;">
+                <span style="color: white">ProductID : </span>#{{ obj.Pid }}<br/>
+        			 <span style="color: white">Product : </span>{{ obj.Pname }}<br/>
+               <span style="color: white">Brand : </span>{{ obj.Pbrand }}<br/>
+					     <span style="color: white">Type : </span>{{ obj.Ptype }}<br/>
+					     <span style="color: white">Price : </span>{{ obj.Pprice }}<span style="color: white"> THB</span><br/>
+               {% ifequal obj.Pamount 0 %}
+                <span style="color: white">Stock : </span> <span style="color: red">Sold out </span> <br/>
+                {% else %}
+                <span style="color: white">Stock : </span> <span style="color: #02c902;">In Stock </span> <br/>
+                {% endifequal %}
+        		</p>
+				    <img src="/static/img/Photo_Product/{{ obj.Ppicture }}" />
+      		</div>
+    {% endifequal %}
+    {% endfor %}
+    </div>
     </div>
     <!--<div class="row text-center">
       <a class="btn btn-secondary" href="#">View Complete Catalogue</a>
