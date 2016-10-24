@@ -32,7 +32,7 @@ header p {
 .jumbotron {
   display: flex;
   align-items: center;
-  background-image: url('http://www.lorealparisusa.com/~/media/images/lop/home/products/makeup/sliders/makeup-tablet.ashx');
+  background-image: url('/static/img/mainpic/Loreal.jpg');
   background-size: cover;
   color: #ffffff;
   height: 500px;
