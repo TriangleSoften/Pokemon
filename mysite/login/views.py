@@ -46,7 +46,7 @@ def index(request):
 				  <div class="form-group"> 
 				    <div class="col-sm-offset-1 col-sm-10">
 				      <button type="submit" class="btn btn-success" value="SignIn">Sign In</button>
-				      <button type="cancel" class="btn btn-default" value="Create"><a href="/register?">Create Account</a></button>
+				      <button type="button" class="btn btn-default" value="Create"><a href="/register?">Create Account</a></button>
 				    </div>
 				  </div>
 				</form>
@@ -125,7 +125,7 @@ def failattempt(request):
 				  <div class="form-group"> 
 				    <div class="col-sm-offset-1 col-sm-10">
 				      <button type="submit" class="btn btn-success" value="SignIn">Sign In</button>
-				      <button type="cancel" class="btn btn-default" value="Create"><a href="/register?">Create Account</a></button>
+				      <button type="button" class="btn btn-default" value="Create"><a href="/register?">Create Account</a></button>
 				    </div>
 				  </div>
 				</form>
