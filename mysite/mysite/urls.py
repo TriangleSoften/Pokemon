@@ -21,7 +21,7 @@ from django.contrib import admin
 urlpatterns = [
 	#(r'^$', views.index, name='index'),
 	url(r'^register/', include('register.urls')),
-    url(r'^Triangle/', include('Triangle.urls')),
+    url(r'^home/', include('Triangle.urls')),
     url(r'^login/', include('login.urls')),
     #url(r'^Triangle/showdata/', include('Triangle.urls')),
 	url(r'^admin/', admin.site.urls),
