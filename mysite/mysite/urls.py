@@ -25,4 +25,5 @@ urlpatterns = [
     url(r'^login/', include('login.urls')),
     #url(r'^Triangle/showdata/', include('Triangle.urls')),
 	url(r'^admin/', admin.site.urls),
+    url(r'^catalog/', include('catalog.urls')),
 ]

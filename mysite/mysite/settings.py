@@ -79,8 +79,8 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'pikachuproject',
-        'USER': 'pikachuprojectuser',
+        'NAME': 'GithubTriangle',
+        'USER': 'Github',
         'PASSWORD': 'password',
         'HOST': 'localhost',
         'PORT': '3306',
