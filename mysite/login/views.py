@@ -11,47 +11,75 @@ def index(request):
 				<!DOCTYPE html>
 				<html lang="en">
 				<head>
-				  <title>:: Sign In ::</title>
+				  <title>Login - TRiANGLE</title>
 				  <meta charset="utf-8">
 				  <meta name="viewport" content="width=device-width, initial-scale=1">
 				  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 				  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 				  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 				</head>
+
 				<body>
-
-				<div class="container">
-				  <h2>:: Sign In ::</h2>
-
-				<form class="form-horizontal" name="submit_form" id="submit_form" action="/login/attempt/" method="post">
-				  <div class="form-group">
-				    <label class="control-label col-sm-1" for="username">Username:</label>
-				    <div class="col-sm-2">
-				      <input name="user" type="text" class="form-control"  id="user" placeholder="Enter username">
+				  <nav class="navbar navbar-inverse navbar-fixed-top">
+				  <div class="container-fluid">
+				    <div class="navbar-header">
+				      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+				      <a class="navbar-brand" href="" >TRiANGLE</a>
+				    </div>
+				    <div class="collapse navbar-collapse" id="myNavbar">
+				      <ul class="nav navbar-nav navbar-right">
+				        <li><a href="/Triangle/">HOME</a></li>
+				        <li><a href="/catalog">CATALOG</a></li>
+				        <li><a href="#">CONTACT</a></li>
+				        <li class="dropdown">
+				          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>&nbsp&nbspMEMBER
+				          <span class="caret"></span></a>
+				          <ul class="dropdown-menu">
+				            <li><a href="/login/"><span class="glyphicon glyphicon-log-in"></span>&nbsp&nbspLog in</a></li>
+				            <li><a href="/register/"><span class="glyphicon glyphicon-edit"></span>&nbsp&nbspSign Up</a></li>
+				          </ul>
+				        </li>
+				        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+				      </ul>
 				    </div>
 				  </div>
-				  <div class="form-group">
-				    <label class="control-label col-sm-1" for="pwd">Password:</label>
-				    <div class="col-sm-2"> 
-				      <input name="pwd" type="password" class="form-control"  id="pwd" placeholder="Enter password">
-				    </div>
-				  </div>
-				  <div class="form-group"> 
-				    <div class="col-sm-offset-1 col-sm-10">
-				      <div class="checkbox">
-				        <label><input type="checkbox" name="remember_me"> Remember me</label>
-				      </div>
-				    </div>
-				  </div>
-				  <div class="form-group"> 
-				    <div class="col-sm-offset-1 col-sm-10">
-				      <button type="submit" class="btn btn-success" value="SignIn">Sign In</button>
-				      <button type="button" class="btn btn-default" value="Create"><a href="/register?">Create Account</a></button>
-				    </div>
-				  </div>
+				</nav>
+				<br><br>
+				        <div class="container">
+				          <h2>Log In</h2>
+				        <form class="form-horizontal" name="submit_form" id="submit_form" action="/login/attempt/" method="post">
+				          <div class="form-group">
+				            <label class="control-label col-sm-1" for="username">Username:</label>
+				            <div class="col-sm-2">
+				              <input name="user" type="text" class="form-control"  id="user" placeholder="Enter username">
+				            </div>
+				          </div>
+				          <div class="form-group">
+				            <label class="control-label col-sm-1" for="pwd">Password:</label>
+				            <div class="col-sm-2"> 
+				              <input name="pwd" type="password" class="form-control"  id="pwd" placeholder="Enter password">
+				            </div>
+				          </div>
+				          <div class="form-group"> 
+				            <div class="col-sm-offset-1 col-sm-10">
+				              <div class="checkbox">
+				                <label><input type="checkbox" name="remember_me"> Remember me</label>
+				              </div>
+				            </div>
+				          </div>
+				          <div class="form-group"> 
+				            <div class="col-sm-offset-1 col-sm-10">
+				              <button type="submit" class="btn btn-primary" value="SignIn">Sign In</button>
+				             <a href="/register?" button type="button" class="btn btn-default" value="Create">Create Account</a></button>
+				            </div>
+				          </div>
 				</form>
 				</body>
-				</html>
+			    </html>
 		'''
 	return HttpResponse(page)
 
@@ -72,7 +100,7 @@ def attempt(request):
 		print(user.username)
 		print(user.password)
 		if user.password == passatt:
-			return HttpResponseRedirect('/login/') # succress login 
+			return HttpResponseRedirect('/Triangle/') # succress login 
 		else:
 			return HttpResponseRedirect('/login/failattempt/') 
 	except:
@@ -88,48 +116,78 @@ def failattempt(request):
 				<!DOCTYPE html>
 				<html lang="en">
 				<head>
-				  <title>:: Sign In ::</title>
+				  <title>Login - TRiANGLE</title>
 				  <meta charset="utf-8">
 				  <meta name="viewport" content="width=device-width, initial-scale=1">
 				  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 				  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 				  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 				</head>
-				<body>
 
-				<div class="container">
-				  <h2>:: Sign In ::</h2>
-				<div class="alert alert-danger">
-  				  <strong>Username or password incorrect.</strong> Please try again.
-				</div>
-				<form class="form-horizontal" name="submit_form" id="submit_form" action="/login/attempt/" method="post">
-				  <div class="form-group">
-				    <label class="control-label col-sm-1" for="username">Username:</label>
-				    <div class="col-sm-2">
-				      <input type="text" class="form-control" name="user" id="user" placeholder="Enter username">
+				<body>
+				  <nav class="navbar navbar-inverse navbar-fixed-top">
+				  <div class="container-fluid">
+				    <div class="navbar-header">
+				      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+				      <a class="navbar-brand" href="" >TRiANGLE</a>
+				    </div>
+				    <div class="collapse navbar-collapse" id="myNavbar">
+				      <ul class="nav navbar-nav navbar-right">
+				        <li><a href="/Triangle/">HOME</a></li>
+				        <li><a href="/catalog">CATALOG</a></li>
+				        <li><a href="#">CONTACT</a></li>
+				        <li class="dropdown">
+				          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>&nbsp&nbspMEMBER
+				          <span class="caret"></span></a>
+				          <ul class="dropdown-menu">
+				            <li><a href="/login/"><span class="glyphicon glyphicon-log-in"></span>&nbsp&nbspLog in</a></li>
+				            <li><a href="/register/"><span class="glyphicon glyphicon-edit"></span>&nbsp&nbspSign Up</a></li>
+				          </ul>
+				        </li>
+				        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+				      </ul>
 				    </div>
 				  </div>
-				  <div class="form-group">
-				    <label class="control-label col-sm-1" for="pwd">Password:</label>
-				    <div class="col-sm-2"> 
-				      <input type="password" class="form-control" name="pwd" id="pwd" placeholder="Enter password">
-				    </div>
-				  </div>
-				  <div class="form-group"> 
-				    <div class="col-sm-offset-1 col-sm-10">
-				      <div class="checkbox">
-				        <label><input type="checkbox"> Remember me</label>
-				      </div>
-				    </div>
-				  </div>
-				  <div class="form-group"> 
-				    <div class="col-sm-offset-1 col-sm-10">
-				      <button type="submit" class="btn btn-success" value="SignIn">Sign In</button>
-				      <button type="button" class="btn btn-default" value="Create"><a href="/register?">Create Account</a></button>
-				    </div>
-				  </div>
+				</nav>
+				<br><br>
+				        <div class="container">
+				          <h2>Log In</h2>
+				        <div class="alert alert-danger">
+				  			<strong>Username or password incorrect.</strong> Please try again.
+						</div>  
+				        <form class="form-horizontal" name="submit_form" id="submit_form" action="/login/attempt/" method="post">
+				            <div class="form-group has-error has-feedback">
+							  <label class="control-label col-sm-1" for="usernameError">Username:</label>
+							  <div class="col-sm-2">
+							    <input type="text" name="user" class="form-control" id="username" placeholder="Enter username">
+
+							  </div>
+							</div>
+							<div class="form-group has-error has-feedback">
+							  <label class="control-label col-sm-1" for="pwd">Password:</label>
+							  <div class="col-sm-2"> 
+							    <input type="password" name="pwd" class="form-control" id="pwd" placeholder="Enter password">
+							  </div>
+							  </div>
+				          <div class="form-group"> 
+				            <div class="col-sm-offset-1 col-sm-10">
+				              <div class="checkbox">
+				                <label><input type="checkbox" name="remember_me"> Remember me</label>
+				              </div>
+				            </div>
+				          </div>
+				          <div class="form-group"> 
+				            <div class="col-sm-offset-1 col-sm-10">
+				              <button type="submit" class="btn btn-primary" value="SignIn">Sign In</button>
+				             <a href="/register?" button type="button" class="btn btn-default" value="Create">Create Account</a></button>
+				            </div>
+				          </div>
 				</form>
 				</body>
-				</html>
+			    </html>
 		'''
 	return HttpResponse(page)
