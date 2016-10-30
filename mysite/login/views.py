@@ -43,11 +43,11 @@ def index(request):
 				        <span class="icon-bar"></span>
 				        <span class="icon-bar"></span>
 				      </button>
-				      <a class="navbar-brand" href="/Triangle/" >TRiANGLE</a>
+				      <a class="navbar-brand" href="/home/" >TRiANGLE</a>
 				    </div>
 				    <div class="collapse navbar-collapse" id="myNavbar">
 				      <ul class="nav navbar-nav navbar-right">
-				        <li><a href="/Triangle/">HOME</a></li>
+				        <li><a href="/home/">HOME</a></li>
 				        <li><a href="/catalog">CATALOG</a></li>
 				        <li><a href="#">CONTACT</a></li>
 				        <li class="dropdown">
@@ -115,7 +115,7 @@ def attempt(request):
 		print(user.username)
 		print(user.password)
 		if user.password == passatt:
-			return HttpResponseRedirect('/Triangle/') # succress login 
+			return HttpResponseRedirect('/home/') # succress login 
 		else:
 			return HttpResponseRedirect('/login/failattempt/') 
 	except:
@@ -163,11 +163,11 @@ def failattempt(request):
 				        <span class="icon-bar"></span>
 				        <span class="icon-bar"></span>
 				      </button>
-				      <a class="navbar-brand" href="/Triangle/" >TRiANGLE</a>
+				      <a class="navbar-brand" href="/home/" >TRiANGLE</a>
 				    </div>
 				    <div class="collapse navbar-collapse" id="myNavbar">
 				      <ul class="nav navbar-nav navbar-right">
-				        <li><a href="/Triangle/">HOME</a></li>
+				        <li><a href="/home/">HOME</a></li>
 				        <li><a href="/catalog">CATALOG</a></li>
 				        <li><a href="#">CONTACT</a></li>
 				        <li class="dropdown">
