@@ -1,41 +1,80 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Triangle</title>
+  <title>Home - TRiANGLE</title>
   <meta charset="utf-8" />
-
-
   <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" href="/static/css/codeb.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/codebcatalog.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+           .navbar {
+          padding-top: 5px;
+          padding-bottom: 5px;
+          border: 0;
+          border-radius: 0;
+          margin-bottom: 0;
+          font-size: 18px;
+          letter-spacing: 3px;            
+        }
+        .navbar-nav li a:hover {
+          color: #FFDEAD !important;
+        }
+        .navbar-brand{
+          font-size:24px;
+          color: #FFDEAD !important;
+        }
+          </style>
 </head>
 
-<body style="background-image: url('/static/img/mainpic/background.jpg')">
-  <header class="container">
-    <div class="row">
-      <h1 class="col-sm-8" style="color: orange">Triangle</h1>
-      <nav class="col-sm-4" style="color: white">
-        <a href="../login" style="text-decoration: none; color: white;"><p>Login</p></a>
-        <!--<p>newest</p>-->
-        <div class="dropdown">
-          <p class="dropbtn">Catalogue</p>
-              <div class="dropdown-content">
-                <a href="../catalog">All</a>
-                <a href="../catalog/skincare">Skincare</a>
-                <a href="../catalog/base_makeup">Base Makeup</a>
-                <a href='../catalog/point_makeup'>Point Makeup</a>
-                <a href="../catalog/accessories">Accessories</a>
-                <a href="../catalog/fragrance">Fragrance</a>
-              </div>
-        </div>
-        <p>About Us</p>
-      </nav>
+<body style="background-color:black">
+  
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/home/" >TRiANGLE</a>
     </div>
-  </header>
-  <section class="jumbotron">
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/home/">HOME</a></li>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/catalog/">CATALOG<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="../catalog">All</a></li>
+            <li><a href="../catalog/skincare">Skincare</a></li>
+            <li><a href="../catalog/base_makeup">Base Makeup</a></li>
+            <li><a href='../catalog/point_makeup'>Point Makeup</a></li>
+            <li><a href="../catalog/accessories">Accessories</a></li>
+            <li><a href="../catalog/fragrance">Fragrance</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#">ABOUT US</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>&nbsp&nbspMEMBER
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/login/"><span class="glyphicon glyphicon-log-in"></span>&nbsp&nbspLog in</a></li>
+            <li><a href="/register/"><span class="glyphicon glyphicon-edit"></span>&nbsp&nbspSign Up</a></li>
+          </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br><br>
+  <section class="jumbotron" style="background-image: url('/static/img/mainpic/Loreal.jpg');">
     <div class="container">
       <div class="row text-center">
-        <h2>Triangle Cosmetic</h2>
+        <h2>TRiANGLE Cosmetic</h2>
         <h3>Makeup Power</h3>
         <!--<a class="btn btn-primary" href="#">See all</a>-->
       </div>
