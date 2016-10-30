@@ -7,7 +7,7 @@ from login.models import logUsers
 
 
 def index(request):
-	page = '''	
+	page = '''
 				<!DOCTYPE html>
 				<html lang="en">
 				<head>
@@ -17,6 +17,21 @@ def index(request):
 				  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 				  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 				  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+				  <style>
+				    .navbar {
+				    padding-top: 0px;
+				    padding-bottom: 0px;
+				    border: 0;
+				    border-radius: 0;
+				    margin-bottom: 0;
+				    font-size: 13px;
+				    letter-spacing: 3px;
+				    }
+				    .navbar-nav li a:hover {
+				    color: #FFDEAD !important;
+				    }
+
+				  </style>
 				</head>
 
 				<body>
@@ -28,7 +43,7 @@ def index(request):
 				        <span class="icon-bar"></span>
 				        <span class="icon-bar"></span>
 				      </button>
-				      <a class="navbar-brand" href="" >TRiANGLE</a>
+				      <a class="navbar-brand" href="/Triangle/" >TRiANGLE</a>
 				    </div>
 				    <div class="collapse navbar-collapse" id="myNavbar">
 				      <ul class="nav navbar-nav navbar-right">
@@ -77,9 +92,9 @@ def index(request):
 				             <a href="/register?" button type="button" class="btn btn-default" value="Create">Create Account</a></button>
 				            </div>
 				          </div>
-				</form>
-				</body>
-			    </html>
+				        </form>
+				        </body>
+				        </html>
 		'''
 	return HttpResponse(page)
 
@@ -122,6 +137,21 @@ def failattempt(request):
 				  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 				  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 				  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+				  <style>
+				    .navbar {
+				    padding-top: 0px;
+				    padding-bottom: 0px;
+				    border: 0;
+				    border-radius: 0;
+				    margin-bottom: 0;
+				    font-size: 13px;
+				    letter-spacing: 3px;
+				    }
+				    .navbar-nav li a:hover {
+				    color: #FFDEAD !important;
+				    }
+
+				  </style>
 				</head>
 
 				<body>
@@ -133,7 +163,7 @@ def failattempt(request):
 				        <span class="icon-bar"></span>
 				        <span class="icon-bar"></span>
 				      </button>
-				      <a class="navbar-brand" href="" >TRiANGLE</a>
+				      <a class="navbar-brand" href="/Triangle/" >TRiANGLE</a>
 				    </div>
 				    <div class="collapse navbar-collapse" id="myNavbar">
 				      <ul class="nav navbar-nav navbar-right">
