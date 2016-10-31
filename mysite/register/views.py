@@ -9,6 +9,7 @@ def index(request):
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="shortcut icon" type="image/png" href="/static/img/logo1.png"/>
   <title>Sign Up - TRiANGLE</title>
   <meta charset="utf-8" />
   <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
@@ -413,6 +414,7 @@ def failattempt (request):
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="shortcut icon" type="image/png" href="/static/img/logo1.png"/>
   <title>Sign Up - TRiANGLE</title>
   <meta charset="utf-8" />
   <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
