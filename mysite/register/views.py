@@ -3,9 +3,26 @@ from django.shortcuts import HttpResponseRedirect
 from django.views.decorators.csrf import csrf_exempt
 from django.db import connection
 from register.models import regUsers
+from django.contrib.auth.models import User
 
-def index(request):
-	page = '''	
+def index(request): 
+  userin=request.user.username
+  print (userin)
+  if userin is not None:
+    userbar = '''<a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>&nbsp&nbsp'''+userin+'''<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/Profile/"><span class="glyphicon glyphicon-edit"></span>&nbsp&nbspProfile</a></li>
+                    <li><a href="/login/"><span class="glyphicon glyphicon-log-in"></span>&nbsp&nbspLog Out</a></li>
+                  </ul>'''
+
+  else:
+    userbar = '''<a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>&nbsp&nbspMEMBER<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/login/"><span class="glyphicon glyphicon-log-in"></span>&nbsp&nbspLog In</a></li>
+                    <li><a href="/register/"><span class="glyphicon glyphicon-edit"></span>&nbsp&nbspSign Up</a></li>
+                  </ul>'''
+
+  page = '''	
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -67,11 +84,7 @@ def index(request):
                 </li>
                 <li><a href="#">ABOUT US</a></li>
                 <li class="dropdown">
-                  <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>&nbsp&nbspMEMBER<span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="/login/"><span class="glyphicon glyphicon-log-in"></span>&nbsp&nbspLog in</a></li>
-                    <li><a href="/register/"><span class="glyphicon glyphicon-edit"></span>&nbsp&nbspSign Up</a></li>
-                  </ul>
+                  '''+userbar+'''
                 </li>
                 <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
               </ul>
@@ -342,7 +355,7 @@ def index(request):
 		'''
 
 
-	return HttpResponse(page)
+  return HttpResponse(page)
 
 
 @csrf_exempt
@@ -378,23 +391,27 @@ def attempt (request):
         	return HttpResponseRedirect('/register/failattempt/?id=email')
 
         try:
-        	user = regUsers.objects.get(username = username)
+        	user = User.objects.get(username = username)
         	return HttpResponseRedirect('/register/failattempt/?id=user')
         except :
         	print ""
 
 
         try:
-        	user = regUsers.objects.get(email = email)
+        	user = User.objects.get(email = email)
         	return HttpResponseRedirect('/register/failattempt/?id=email2')
         except :
         	print ""
 
-			
-        with connection.cursor() as cursor:
-           	cursor.execute("INSERT INTO userdata (username, password, firstname, lastname, email, gender, dateofbirth, phonenum) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)", (username, password, firstname, lastname, email, gender, dateofbirth, phonenum))
+        user = User.objects.create_user(username, email, password)
+        user.firstname = firstname
+        user.lastname = lastname
+        user.save()
+        login(request, user)
+        #with connection.cursor() as cursor:
+        #   	cursor.execute("INSERT INTO userdata (username, password, firstname, lastname, email, gender, dateofbirth, phonenum) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)", (username, password, firstname, lastname, email, gender, dateofbirth, phonenum))
 
-    	return HttpResponseRedirect('/login/')
+    	return HttpResponseRedirect('/home/')
 
 
 def failattempt (request):
@@ -472,11 +489,7 @@ def failattempt (request):
                 </li>
                 <li><a href="#">ABOUT</a></li>
                 <li class="dropdown">
-                  <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>&nbsp&nbspMEMBER<span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="/login/"><span class="glyphicon glyphicon-log-in"></span>&nbsp&nbspLog in</a></li>
-                    <li><a href="/register/"><span class="glyphicon glyphicon-edit"></span>&nbsp&nbspSign Up</a></li>
-                  </ul>
+                  '''+userbar+'''
                 </li>
                 <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
               </ul>

@@ -4,9 +4,31 @@ from django.views.decorators.csrf import csrf_exempt
 from django.db import connection
 from django.conf import settings
 from login.models import logUsers
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.models import User
+
 
 
 def index(request):
+
+	logout(request)
+	
+	userin=request.user.username
+	print (userin)
+	if userin != "":
+		userbar = '''<a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>&nbsp&nbsp'''+userin+'''<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/Profile/"><span class="glyphicon glyphicon-edit"></span>&nbsp&nbspProfile</a></li>
+                    <li><a href="/login/"><span class="glyphicon glyphicon-log-in"></span>&nbsp&nbspLog Out</a></li>
+                  </ul>'''
+
+	else:
+		userbar = '''<a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>&nbsp&nbspMEMBER<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/login/"><span class="glyphicon glyphicon-log-in"></span>&nbsp&nbspLog In</a></li>
+                    <li><a href="/register/"><span class="glyphicon glyphicon-edit"></span>&nbsp&nbspSign Up</a></li>
+                  </ul>'''
+
 	page = '''
 				<!DOCTYPE html>
   <html lang="en">
@@ -69,11 +91,7 @@ def index(request):
                 </li>
                 <li><a href="#">CONTACT</a></li>
                 <li class="dropdown">
-                  <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>&nbsp&nbspMEMBER<span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="/login/"><span class="glyphicon glyphicon-log-in"></span>&nbsp&nbspLog in</a></li>
-                    <li><a href="/register/"><span class="glyphicon glyphicon-edit"></span>&nbsp&nbspSign Up</a></li>
-                  </ul>
+                  '''+userbar+'''
                 </li>
                 <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
               </ul>
@@ -137,17 +155,29 @@ def attempt(request):
 		print(useratt)
 		print(passatt)
 
-
-	try:
-		user = logUsers.objects.get(username = useratt)
-		print(user.username)
-		print(user.password)
-		if user.password == passatt:
-			return HttpResponseRedirect('/home/') # succress login 
-		else:
-			return HttpResponseRedirect('/login/failattempt/') 
-	except:
+	u = User.objects.get(username='User1')
+	u.set_password('1234')
+	u.save()
+	#user = User.objects.create_user('User1', '1234')
+	#user.save()
+	user = authenticate(username=useratt, password=passatt)
+	if user is not None:
+		login(request, user)
+        # Redirect to a success page.
+		return HttpResponseRedirect('/home/')
+	else:
+        # Return an 'invalid login' error message.
 		return HttpResponseRedirect('/login/failattempt/') 
+#	try:
+#		user = logUsers.objects.get(username = useratt)
+#		print(user.username)
+#		print(user.password)
+#		if user.password == passatt:
+#			return HttpResponseRedirect('/home/') # succress login 
+#		else:
+#			return HttpResponseRedirect('/login/failattempt/') 
+#	except:
+#		return HttpResponseRedirect('/login/failattempt/') 
 
 	
 
@@ -216,11 +246,7 @@ def failattempt(request):
                 </li>
                 <li><a href="#">ABOUT US</a></li>
                 <li class="dropdown">
-                  <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>&nbsp&nbspMEMBER<span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="/login/"><span class="glyphicon glyphicon-log-in"></span>&nbsp&nbspLog in</a></li>
-                    <li><a href="/register/"><span class="glyphicon glyphicon-edit"></span>&nbsp&nbspSign Up</a></li>
-                  </ul>
+                  '''+userbar+'''
                 </li>
                 <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
               </ul>
@@ -245,27 +271,27 @@ def failattempt(request):
 						</div>  
 				        <form class="form-horizontal" name="submit_form" id="submit_form" action="/login/attempt/" method="post">
 				            <div class="form-group has-error has-feedback">
-							  <label class="control-label col-sm-1" for="usernameError">Username:</label>
+							  <label class="control-label col-xs-offset-4 col-sm-1" for="usernameError">Username:</label>
 							  <div class="col-sm-2">
 							    <input type="text" name="user" class="form-control" id="username" placeholder="Enter username">
 
 							  </div>
 							</div>
 							<div class="form-group has-error has-feedback">
-							  <label class="control-label col-sm-1" for="pwd">Password:</label>
+							  <label class="control-label col-xs-offset-4 col-sm-1" for="pwd">Password:</label>
 							  <div class="col-sm-2"> 
 							    <input type="password" name="pwd" class="form-control" id="pwd" placeholder="Enter password">
 							  </div>
 							  </div>
 				          <div class="form-group"> 
-				            <div class="col-sm-offset-1 col-sm-10">
+				            <div class="col-sm-offset-5 col-sm-10">
 				              <div class="checkbox">
 				                <label><input type="checkbox" name="remember_me"> Remember me</label>
 				              </div>
 				            </div>
 				          </div>
 				          <div class="form-group"> 
-				            <div class="col-sm-offset-1 col-sm-10">
+				            <div class="col-sm-offset-5 col-sm-10">
 				              <button type="submit" class="btn btn-primary" value="SignIn">Sign In</button>
 				             <a href="/register?" button type="button" class="btn btn-default" value="Create">Create Account</a></button>
 				            </div>
