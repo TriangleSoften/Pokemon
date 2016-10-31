@@ -9,7 +9,7 @@ from django.contrib.auth import authenticate, login, logout
 def index(request): 
   userin=request.user.username
   print (userin)
-  if userin is not None:
+  if userin != "":
     userbar = '''<a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>&nbsp&nbsp'''+userin+'''<span class="caret"></span></a>
                   <ul class="dropdown-menu">
                     <li><a href="/Profile/"><span class="glyphicon glyphicon-edit"></span>&nbsp&nbspProfile</a></li>
@@ -413,19 +413,38 @@ def attempt (request):
 
 
 def failattempt (request):
-	_id = request.GET.get('id','')
-	msg = ""
 
-	if _id == 'pass':
-		msg = "Both password must be the same"
-	elif _id == 'email':
-		msg = "Both email must be the same"
-	elif _id == 'user':
-		msg = "Username already in use"
-	elif _id == 'email2':
-		msg = "Email already in use"
+  userin=request.user.username
+  print (userin)
+  if userin != "":
+    userbar = '''<a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>&nbsp&nbsp'''+userin+'''<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/Profile/"><span class="glyphicon glyphicon-edit"></span>&nbsp&nbspProfile</a></li>
+                    <li><a href="/login/"><span class="glyphicon glyphicon-log-in"></span>&nbsp&nbspLog Out</a></li>
+                  </ul>'''
 
-	page = '''	
+  else:
+    userbar = '''<a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>&nbsp&nbspMEMBER<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/login/"><span class="glyphicon glyphicon-log-in"></span>&nbsp&nbspLog In</a></li>
+                    <li><a href="/register/"><span class="glyphicon glyphicon-edit"></span>&nbsp&nbspSign Up</a></li>
+                  </ul>'''
+
+
+
+  _id = request.GET.get('id','')
+  msg = ""
+
+  if _id == 'pass':
+    msg = "Both password must be the same"
+  elif _id == 'email':
+    msg = "Both email must be the same"
+  elif _id == 'user':
+    msg = "Username already in use"
+  elif _id == 'email2':
+    msg = "Email already in use"
+
+  page = '''	
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -757,4 +776,4 @@ def failattempt (request):
 		'''
 
 
-	return HttpResponse(page)
+  return HttpResponse(page)

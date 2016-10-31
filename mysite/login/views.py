@@ -33,7 +33,6 @@ def index(request):
 				<!DOCTYPE html>
   <html lang="en">
     <head>
-      <link rel="shortcut icon" type="image/png" href="/static/img/logo1.png"/>
       <title>Login - TRiANGLE</title>
       <meta charset="utf-8" />
   <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
@@ -72,9 +71,7 @@ def index(request):
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="/home/" >TRiANGLE
-              	<!--img style="max-width:100px; margin-top: -7px;"
-             src="/img/logo-full.png"--></a>
+              <a class="navbar-brand" href="/home/" >TRiANGLE</a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
               <ul class="nav navbar-nav navbar-right">
@@ -158,7 +155,7 @@ def attempt(request):
 	u = User.objects.get(username='User1')
 	u.set_password('1234')
 	u.save()
-	#user = User.objects.create_user('User1', '1234')
+	#user = User.objects.create_user('User1','asd@asd', '1234')
 	#user.save()
 	user = authenticate(username=useratt, password=passatt)
 	if user is not None:
@@ -185,11 +182,26 @@ def attempt(request):
 
 
 def failattempt(request):
+
+	userin=request.user.username
+	print (userin)
+	if userin != "":
+		userbar = '''<a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>&nbsp&nbsp'''+userin+'''<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/Profile/"><span class="glyphicon glyphicon-edit"></span>&nbsp&nbspProfile</a></li>
+                    <li><a href="/login/"><span class="glyphicon glyphicon-log-in"></span>&nbsp&nbspLog Out</a></li>
+                  </ul>'''
+
+	else:
+		userbar = '''<a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>&nbsp&nbspMEMBER<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/login/"><span class="glyphicon glyphicon-log-in"></span>&nbsp&nbspLog In</a></li>
+                    <li><a href="/register/"><span class="glyphicon glyphicon-edit"></span>&nbsp&nbspSign Up</a></li>
+                  </ul>'''
 	page = '''	
 				<!DOCTYPE html>
   <html lang="en">
     <head>
-      <link rel="shortcut icon" type="image/png" href="/static/img/logo1.png"/>
       <title>Login - TRiANGLE</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -227,24 +239,22 @@ def failattempt(request):
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="/home/" >TRiANGLE
-              	<!--img style="max-width:100px; margin-top: -7px;"
-             src="/img/logo-full.png"--></a>
+              <a class="navbar-brand" href="/home/" >TRiANGLE</a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
               <ul class="nav navbar-nav navbar-right">
                 <li><a href="/home/">HOME</a></li>
                 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/catalog/">CATALOG<span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li><a href="../../catalog">All</a></li>
-                    <li><a href="../../catalog/skincare">Skincare</a></li>
-                    <li><a href="../../catalog/base_makeup">Base Makeup</a></li>
-                    <li><a href='../../catalog/point_makeup'>Point Makeup</a></li>
-                    <li><a href="../../catalog/accessories">Accessories</a></li>
-                    <li><a href="../../catalog/fragrance">Fragrance</a></li>
+                    <li><a href="../catalog">All</a></li>
+                    <li><a href="../catalog/skincare">Skincare</a></li>
+                    <li><a href="../catalog/base_makeup">Base Makeup</a></li>
+                    <li><a href='../catalog/point_makeup'>Point Makeup</a></li>
+                    <li><a href="../catalog/accessories">Accessories</a></li>
+                    <li><a href="../catalog/fragrance">Fragrance</a></li>
                   </ul>
                 </li>
-                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">CONTACT</a></li>
                 <li class="dropdown">
                   '''+userbar+'''
                 </li>
