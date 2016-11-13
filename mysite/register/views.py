@@ -2,7 +2,7 @@ from django.shortcuts import HttpResponse
 from django.shortcuts import HttpResponseRedirect
 from django.views.decorators.csrf import csrf_exempt
 from django.db import connection
-from register.models import regUsers
+from register.models import UserData
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 
@@ -359,8 +359,8 @@ def index(request):
 @csrf_exempt
 def attempt (request):
     if request.method == "POST":
-        firstname = request.POST.get("firstname", "")
-        lastname = request.POST.get("lastname", "")
+        firstname = request.POST.get("firstName", "")
+        lastname = request.POST.get("lastName", "")
         username = request.POST.get("username", "")
         password = request.POST.get("pwd", "")
         password2 = request.POST.get("pwd2", "")
@@ -402,14 +402,15 @@ def attempt (request):
         	print ""
 
         user = User.objects.create_user(username, email, password)
-        user.firstname = firstname
-        user.lastname = lastname
+        user.first_name = firstname
+        user.last_name = lastname
         user.save()
-        login(request, user)
-        #with connection.cursor() as cursor:
-        #   	cursor.execute("INSERT INTO userdata (username, password, firstname, lastname, email, gender, dateofbirth, phonenum) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)", (username, password, firstname, lastname, email, gender, dateofbirth, phonenum))
+        
+        with connection.cursor() as cursor:
+           	cursor.execute("INSERT INTO userdata (username, gender, dateofbirth, phonenum) VALUES (%s, %s, %s, %s)", (username, gender, dateofbirth, phonenum))
 
-    	return HttpResponseRedirect('/home/')
+        login(request, user)
+    return HttpResponseRedirect('/home/')
 
 
 def failattempt (request):

@@ -3,7 +3,6 @@ from django.shortcuts import HttpResponseRedirect
 from django.views.decorators.csrf import csrf_exempt
 from django.db import connection
 from django.conf import settings
-from login.models import logUsers
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 
@@ -152,11 +151,6 @@ def attempt(request):
 		print(useratt)
 		print(passatt)
 
-	u = User.objects.get(username='User1')
-	u.set_password('1234')
-	u.save()
-	#user = User.objects.create_user('User1','asd@asd', '1234')
-	#user.save()
 	user = authenticate(username=useratt, password=passatt)
 	if user is not None:
 		login(request, user)
