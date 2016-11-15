@@ -1,0 +1,20 @@
+.navbar {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: 0;
+	border-radius: 0;
+	margin-bottom: 0;
+	font-size: 18px;
+	letter-spacing: 3px;
+}
+.navbar-nav li a:hover {
+	color: #FAFAFA !important;
+}
+.navbar-brand{
+	font-size:24px;
+	color: #FF9100 !important;
+}
+
+.dropdown-menu li a:hover {
+  color: #FF9100 !important;
+}

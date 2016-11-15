@@ -8,9 +8,13 @@
 	letter-spacing: 3px;
 }
 .navbar-nav li a:hover {
-	color: #FFDEAD !important;
+	color: #FAFAFA !important;
 }
 .navbar-brand{
 	font-size:24px;
-	color: #FFDEAD !important;
+	color: #FF9100 !important;
+}
+
+.dropdown-menu li a:hover {
+  color: #FF9100 !important;
 }
