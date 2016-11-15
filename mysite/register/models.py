@@ -8,7 +8,3 @@ class UserData(models.Model):
 	gender = models.CharField(max_length=45)
 	dateofbirth = models.CharField(max_length=45)
 	phonenum = models.CharField(max_length=45)
-
-	class Meta:
-		db_table = "userdata"
-		app_label = 'Users'

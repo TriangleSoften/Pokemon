@@ -2,7 +2,7 @@
 <html>
 <head>
   <link rel="shortcut icon" type="image/png" href="/static/img/logo1.png"/>
-  <title>Catalog All - TRiANGLE</title>
+  <title>Catalog - TRiANGLE</title>
 <meta charset="utf-8" />
   <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="/static/css/codebcatalog.css">
@@ -19,7 +19,7 @@
           border-radius: 0;
           margin-bottom: 0;
           font-size: 18px;
-          letter-spacing: 3px;
+          letter-spacing: 3px;            
         }
         .navbar-nav li a:hover {
           color: #FFDEAD !important;
@@ -32,7 +32,7 @@
 </head>
 
 <body style="background-color:black">
-
+  
     <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -50,12 +50,12 @@
         <li><a href="/home/">HOME</a></li>
         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/catalog/">CATALOG<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="">All</a></li>
-            <li><a href="../catalog/skincare">Skincare</a></li>
-            <li><a href="../catalog/base_makeup">Base Makeup</a></li>
-            <li><a href='../catalog/point_makeup'>Point Makeup</a></li>
-            <li><a href="../catalog/accessories">Accessories</a></li>
-            <li><a href="../catalog/fragrance">Fragrance</a></li>
+            <li><a href="../catalog/">All</a></li>
+            <li><a href="../catalog/?search=skincare">Skincare</a></li>
+            <li><a href="../catalog/?search=base makeup">Base Makeup</a></li>
+            <li><a href='../catalog/?search=point makeup'>Point Makeup</a></li>
+            <li><a href="../catalog/?search=accessories">Accessories</a></li>
+            <li><a href="../catalog/?search=fragrance">Fragrance</a></li>
           </ul>
         </li>
 
@@ -88,8 +88,7 @@
     <div class="row-xs-height">
     {% for obj in object_list %}
       		<div class="col-xs-4 col-height" style="height: 600px;">
-            <img src="/static/img/Photo_Product/{{ obj.Ppicture }}" />
-            <p style="height: 160px;">
+        		<p style="height: 160px;">
                 <span style="color: white">ProductID : </span>#{{ obj.Pid }}<br/>
         			 <span style="color: white">Product : </span>{{ obj.Pname }}<br/>
                <span style="color: white">Brand : </span>{{ obj.Pbrand }}<br/>
@@ -101,6 +100,7 @@
                 <span style="color: white">Stock : </span> <span style="color: #02c902;">In Stock </span> <br/>
                 {% endifequal %}
         		</p>
+				    <img src="/static/img/Photo_Product/{{ obj.Ppicture }}" />
       		</div>
     {% endfor %}
     </div>
