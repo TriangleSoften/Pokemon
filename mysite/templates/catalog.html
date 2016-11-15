@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<<<<<<< HEAD
 <head>
   <link rel="shortcut icon" type="image/png" href="/static/img/logo1.png"/>
   <title>Catalog - TRiANGLE</title>
@@ -129,5 +130,124 @@
     </div>
   </footer>
 </body>
+=======
+	<head>
+		<link rel="shortcut icon" type="image/png" href="/static/img/logo1.png"/>
+		<title>Catalog All - TRiANGLE</title>
+		<meta charset="utf-8" />
+		<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="/static/css/codebcatalog.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link type="text/css" rel="stylesheet" href="css/style_beboonn.css" >
+	</head>
+
+	<body style="background-color:black">
+
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="/home/" >TRiANGLE
+						<!--img style="max-width:100px; margin-top: -7px;"
+						src="/img/logo-full.png"--></a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="/home/">HOME</a></li>
+						<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/catalog/">CATALOG<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="">All</a></li>
+								<li><a href="../catalog/skincare">Skincare</a></li>
+								<li><a href="../catalog/base_makeup">Base Makeup</a></li>
+								<li><a href='../catalog/point_makeup'>Point Makeup</a></li>
+								<li><a href="../catalog/accessories">Accessories</a></li>
+								<li><a href="../catalog/fragrance">Fragrance</a></li>
+							</ul>
+						</li>
+
+						<li><a href="#">ABOUT US</a></li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>&nbsp&nbspMEMBER
+								<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="/login/"><span class="glyphicon glyphicon-log-in"></span>&nbsp&nbspLog in</a></li>
+								<li><a href="/register/"><span class="glyphicon glyphicon-edit"></span>&nbsp&nbspSign Up</a></li>
+							</ul>
+						</li>
+						<li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+					</ul>
+				</div>
+			</div>
+		</nav> <!-- navbar -->
+
+		<br><br>
+
+		<section class="jumbotron" style="background-image: url('/static/img/mainpic/Loreal.jpg');">
+			<div class="container">
+				<div class="row text-center">
+					<h2>TRiANGLE Cosmetic</h2>
+					<h3>Makeup Power</h3>
+					<!--<a class="btn btn-primary" href="#">See all</a>-->
+				</div>
+			</div>
+		</section>
+
+		<section class="container">
+			<div class="row" style="color: orange;" >
+				<div class="row-xs-height">
+					{% for obj in object_list %}
+					<div class="col-xs-4 col-height" style="height: 600px;">
+						<img src="/static/img/Photo_Product/{{ obj.Ppicture }}" />
+						<p style="height: 160px;">
+							<span style="color: white">ProductID : </span>#{{ obj.Pid }}<br/>
+							<span style="color: white">Product : </span>{{ obj.Pname }}<br/>
+							<span style="color: white">Brand : </span>{{ obj.Pbrand }}<br/>
+							<span style="color: white">Type : </span>{{ obj.Ptype }}<br/>
+							<span style="color: white">Price : </span>{{ obj.Pprice }}<span style="color: white"> THB</span><br/>
+							{% ifequal obj.Pamount 0 %}
+							<span style="color: white">Stock : </span> <span style="color: red">Sold out </span> <br/>
+							{% else %}
+							<span style="color: white">Stock : </span> <span style="color: #02c902;">In Stock </span> <br/>
+							{% endifequal %}
+						</p>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+			<!--<div class="row text-center">
+				<a class="btn btn-secondary" href="#">View Complete Catalogue</a>
+			</div>-->
+		</section>
+
+		<footer class="container">
+			<div class="row">
+				<p class="col-sm-4">&copy; 2016 Skillfair</p>
+				<ul class="col-sm-8">
+					<li class="col-sm-1">
+						<img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/twitter.svg">
+					</li>
+					<li class="col-sm-1">
+						<img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/facebook.svg">
+					</li>
+					<li class="col-sm-1">
+						<img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/instagram.svg">
+					</li>
+					<li class="col-sm-1">
+						<img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/medium.svg">
+					</li>
+				</ul>
+			</div>
+		</footer>
+
+	</body>
+>>>>>>> beboonn
 
 </html>
