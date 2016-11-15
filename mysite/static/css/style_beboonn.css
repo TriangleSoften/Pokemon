@@ -11,10 +11,16 @@
 	color: #FAFAFA !important;
 }
 .navbar-brand{
-	font-size:24px;
+	font-size:30px;
+	position: relative;
+	left: 15px;
 	color: #FF9100 !important;
 }
 
 .dropdown-menu li a:hover {
   color: #FF9100 !important;
+}
+
+.navfont {
+	font-family: 'Cabin Condensed', sans-serif;
 }
