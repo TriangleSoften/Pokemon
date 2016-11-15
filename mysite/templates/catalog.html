@@ -89,6 +89,8 @@
     {% for obj in object_list %}
       		<div class="col-xs-4 col-height" style="height: 600px;">
         		<p style="height: 160px;">
+				
+				    <img src="/static/img/Photo_Product/{{ obj.Ppicture }}" />
                 <span style="color: white">ProductID : </span>#{{ obj.Pid }}<br/>
         			 <span style="color: white">Product : </span>{{ obj.Pname }}<br/>
                <span style="color: white">Brand : </span>{{ obj.Pbrand }}<br/>
@@ -100,7 +102,6 @@
                 <span style="color: white">Stock : </span> <span style="color: #02c902;">In Stock </span> <br/>
                 {% endifequal %}
         		</p>
-				    <img src="/static/img/Photo_Product/{{ obj.Ppicture }}" />
       		</div>
     {% endfor %}
     </div>
