@@ -92,6 +92,30 @@ def index(request):
                     </form>
                 </div>
             </div>
+<<<<<<< HEAD
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="/home/">HOME</a></li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/catalog/">CATALOG<span class="caret"></span></a>
+                   <ul class="dropdown-menu">
+					<li><a href="../catalog/">All</a></li>
+					<li><a href="../catalog/?search=skincare">Skincare</a></li>
+					<li><a href="../catalog/?search=base makeup">Base Makeup</a></li>
+					<li><a href='../catalog/?search=point makeup'>Point Makeup</a></li>
+					<li><a href="../catalog/?search=accessories">Accessories</a></li>
+					<li><a href="../catalog/?search=fragrance">Fragrance</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">CONTACT</a></li>
+                <li class="dropdown">
+                  '''+userbar+'''
+                </li>
+                <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+              </ul>
+            </div>
+          </div>
+=======
+>>>>>>> beboonn
         </nav>
         <!--navbar-->
 
