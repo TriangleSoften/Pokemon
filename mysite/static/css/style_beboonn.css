@@ -165,3 +165,148 @@ footer a:hover {
 .footer {
     background:
 }
+
+
+/*------catalog------*/
+
+.triangle-product {
+    font-family: 'PT Sans Caption', sans-serif;
+}
+
+.triangle-product span {
+    font-size: 25px;
+}
+
+.triangle-prodid {
+    color: #000;
+    background: #FFD4B2;
+    opacity: 0.8;
+    border-radius: 20px;
+    font-size: 28px;
+}
+
+.trianglr-prod {
+    position: relative;
+    left: 10px;
+}
+
+.triangle-price {
+    color: #FFA09E;
+    font-size: 30px;
+}
+
+.sold-out {
+    color: indianred;
+}
+
+.in-stock {
+    color: limegreen;
+}
+
+
+/*----login & register----*/
+
+.login {
+    font-family: 'PT Sans Caption', sans-serif;
+    color: #FFA09E;
+}
+
+.login-box {
+    background: #000;
+    opacity: 0.7;
+    border-radius: 15px;
+    margin-left: 500px;
+    margin-right: 500px;
+    border-top: #fff;
+    border-bottom: #fff;
+}
+
+.login-form {
+    font-family: 'PT Sans Caption', sans-serif;
+    color: #000;
+    font-size: 15px;
+}
+
+.btn-signin {
+    background: #fff;
+    color: #000;
+    border-radius: 2px;
+    border: 0px;
+    text-shadow: none;
+}
+
+.btn-signin:hover {
+    color: #fff !important;
+    background: #FFA09E;
+}
+
+.btn-create {
+    color: #000;
+    background: #fff;
+    border: 0px;
+}
+
+.btn-create:hover {
+    color: #fff !important;
+    background: #F8A792;
+    border: 0px;
+}
+
+
+/*
+.alert-msg {
+    font-family: 'Cabin Condensed', sans-serif;
+    font-size: 18px;
+    background: #C94451;
+    color: #fff;
+}*/
+
+.alert {
+    padding: 19px 15px;
+    color: #fefefe;
+    position: relative;
+    font: 14px/20px Museo300Regular, Helvetica, Arial, sans-serif;
+}
+
+.alert .msg {
+    padding: 0 20px 0 40px;
+}
+
+.alert p {
+    margin: 0;
+}
+
+.alert .toggle-alert {
+    position: absolute;
+    top: 7px;
+    right: 10px;
+    display: block;
+    text-indent: -10000px;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    -webkit-box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1), 1px 1px 1px rgba(255, 255, 255, 0.1);
+    -moz-box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1), 1px 1px 1px rgba(255, 255, 255, 0.1);
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1), 1px 1px 1px rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.08) url(images/alert.png) no-repeat 6px 6px;
+}
+
+.info-box {
+    background: #2fa9f6 url(images/info.png) no-repeat 14px 14px;
+}
+
+.success-box {
+    background: #7EB62E url(images/success.png) no-repeat 14px 14px;
+}
+
+.error-box {
+    background: #C94451 url(images/error.png) no-repeat 14px 14px;
+}
+
+.notice-box {
+    background: #f6ca2f url(images/notice.png) no-repeat 14px 14px;
+}
+
+.download-box {
+    background: #a555ca url(images/download.png) no-repeat 14px 14px;
+}

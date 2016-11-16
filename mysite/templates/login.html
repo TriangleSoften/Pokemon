@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <link rel="shortcut icon" type="image/png" href="/static/img/logo1.png" />
-    <title>Catalog All - TRiANGLE</title>
+    <title>Login - TRiANGLE</title>
     <meta charset="utf-8" />
 
     <link href="https://fonts.googleapis.com/css?family=Cabin+Condensed|PT+Sans+Caption|Viga" rel="stylesheet">
@@ -15,10 +13,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <link type="text/css" rel="stylesheet" href="/static/css/style_beboonn.css">
+
 </head>
 
-<body>
+<body>'
 
     <nav class="navbar navbar-inverse navbar-fixed-top navfont">
         <div class="container-fluid">
@@ -64,7 +64,7 @@
             </div>
         </div>
     </nav>
-    <!-- navbar -->
+    <!--navbar-->
 
     <div id="myCarousel" class="carousel slide" data-ride="carouselx">
 
@@ -72,6 +72,10 @@
         <li data-target="#myCarousel" data-slide-to="1"></li>
 
         <div class="carousel-inner" role="listbox">
+
+
+
+
             <section class="jumbotron item active" style="background-image: url('/static/img/mainpic/box_1.png');">
                 <div class="container">
                     <div class="row text-center">
@@ -101,7 +105,6 @@
                                But It can buy Makeup!
                            </span>
 -->
-
                         </div>
                     </div>
                 </div>
@@ -119,66 +122,92 @@
 
     </div>
 
-    <!--    ---triangle header----->
+    <!--    ----triangle header------>
 
-    <section class="container">
-        <div class="row triangle-product">
-            <div class="row-xs-height">
-                {% for obj in object_list %}
-                <div class="col-xs-4 col-height" style="height: 600px;">
-                    <img src="/static/img/Photo_Product/{{ obj.Ppicture }}" />
-                    <p style="height: 160px;">
-                        <span class="triangle-prodid">ProductID : </span>#{{ obj.Pid }}
-                        <!--                        <br/>-->
-                        <span class="triangle-prod">Product : </span>{{ obj.Pname }}
-                        <br/>
-                        <span class="triangle-brand">Brand : </span>{{ obj.Pbrand }}
-                        <br/>
-                        <span class="triangle-type">Type : </span>{{ obj.Ptype }}
-                        <br/>
-                        <span class="triangle-price">Price : </span>{{ obj.Pprice }}<span> THB</span>
-                        <br/> {% ifequal obj.Pamount 0 %}
-                        <!--                        <span>Stock : </span> -->
-                        <span class="sold-out triangle-status">Sold out </span>
-                        <br/> {% else %}
-                        <!--                        <span>Stock : </span> -->
-                        <span class="in-stock triangle-status">In Stock </span>
-                        <br/> {% endifequal %}
-                    </p>
-                </div>
-                {% endfor %}
-            </div>
+    <div class="text-center login login-box">
+        <h2>Log In</h2>
+    </div>
+    <br>
+
+
+    <div class="container">
+
+        <!--    -------->
+
+        <div class="alert error-box">
+            <strong class="msg">Username or password incorrect.</strong> Please try again.
+            <a class="toggle-alert" href="#">Toggle</a>
+
         </div>
-        <!--<div class="row text-center">
-				<a class="btn btn-secondary" href="#">View Complete Catalogue</a>
-			</div>-->
-    </section>
 
-    <footer class="text-center">
-        <!--
+        <!--    -------->
+
+        <form class="form-horizontal login-form" name="submit_form" id="submit_form" action="/login/attempt/" method="post">
+
+            <div class="form-group">
+                <label class="control-label col-xs-offset-4 col-sm-1" for="username">Username:</label>
+                <div class="col-sm-2">
+                    <input name="user" type="text" class="form-control" id="user" placeholder="Enter username">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-xs-offset-4 col-sm-1" for="pwd">Password:</label>
+                <div class="col-sm-2">
+                    <input name="pwd" type="password" class="form-control" id="pwd" placeholder="Enter password">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-5 col-sm-10">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" name="remember_me"> Remember me</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-5 col-sm-10">
+                    <button type="submit" class="btn btn-default btn-signin" value="SignIn">Sign In</button>
+                    <a href="/register?" button type="button" class="btn btn-default btn-create" value="Create">Create Account</a>
+                </div>
+            </div>
+
+        </form>
+
+        <!--    -----end of form------>
+
+        <footer class="text-center">
+            <!--
         <a class="up-arrow" href="/home" data-toggle="tooltip" title="TO TOP">
             <span class="glyphicon glyphicon-chevron-up"></span>
         </a>
 -->
-        <div class="col-sm-6">
-            <a href="#">ABOUT US</a>
-            <br>
-            <span>...............</span>
-            <br>
-            <span>..............</span>
-            <br>
-            <span>..............</span>
-        </div>
-        <div class="col-sm-6">
-            <span>Contact Us</span>
-        </div>
-    </footer>
+            <div class="col-sm-6">
+                <a href="#">ABOUT US</a>
+                <br>
+                <span>...............</span>
+                <br>
+                <span>..............</span>
+                <br>
+                <span>..............</span>
+            </div>
+            <div class="col-sm-6">
+                <span>Contact Us</span>
+            </div>
+        </footer>
 
-    <script>
-        $(document).ready(function () {
-                    // Initialize Tooltip
-                    $('[data-toggle="tooltip"]').tooltip();
-    </script>
+        <script>
+            $(document).ready(function () {
+                        // Initialize Tooltip
+                        $('[data-toggle="tooltip"]').tooltip();
+
+                        jQuery(document).ready(function () {
+                            $(".alert .toggle-alert").click(function () {
+                                $(this).closest(".alert").slideUp();
+                                return false;
+                            });
+                        });
+        </script>
+
 
 </body>
 
