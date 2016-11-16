@@ -6,6 +6,7 @@
     margin-bottom: 0;
     font-size: 18px;
     letter-spacing: 3px;
+    opacity: 0.9;
 }
 
 .navbar-nav li a:hover {
@@ -50,12 +51,6 @@
     opacity: 1;
 }
 
-.home-picture {
-    font-family: 'PT Sans Caption', sans-serif;
-    font-size: 28px;
-    color: #000;
-}
-
 .triangle-white-box1 {
     background: #FFFFFF;
     opacity: 0.7;
@@ -77,8 +72,54 @@
     left: 250px;
 }
 
+.triangle-img {
+    overflow: hidden;
+}
+
 .triangle-img-shadow {
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.50);
+}
+
+.hover14 {
+    position: relative;
+}
+
+.hover14::before {
+    position: absolute;
+    top: 0;
+    left: -75%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+    -webkit-transform: skewX(-25deg);
+    transform: skewX(-25deg);
+}
+
+.hover14:hover::before {
+    -webkit-animation: shine .75s;
+    animation: shine .75s;
+}
+
+@-webkit-keyframes shine {
+    100% {
+        left: 125%;
+    }
+}
+
+@keyframes shine {
+    100% {
+        left: 125%;
+    }
+}
+
+.triangle-catalog-text {
+    font-family: 'PT Sans Caption', sans-serif;
+    font-size: 28px;
+    color: #000;
 }
 
 .btn-summit:hover {
@@ -92,4 +133,8 @@
 
 .padding-top-60 {
     padding-top: 60px;
+}
+
+.footer {
+    background:
 }
