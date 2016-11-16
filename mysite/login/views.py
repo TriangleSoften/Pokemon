@@ -65,36 +65,7 @@ def index(request):
              src="../static/img/logo2.png"/>--></a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
-<<<<<<< HEAD
-              <ul class="nav navbar-nav navbar-right">
-                <li><a href="/home/">HOME</a></li>
-                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/catalog/">CATALOG<span class="caret"></span></a>
-				<ul class="dropdown-menu">
-					<li><a href="../catalog/">All</a></li>
-					<li><a href="../catalog/?search=skincare">Skincare</a></li>
-					<li><a href="../catalog/?search=base makeup">Base Makeup</a></li>
-					<li><a href='../catalog/?search=point makeup'>Point Makeup</a></li>
-					<li><a href="../catalog/?search=accessories">Accessories</a></li>
-					<li><a href="../catalog/?search=fragrance">Fragrance</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">CONTACT</a></li>
-                <li class="dropdown">
-                  '''+userbar+'''
-                </li>
-                <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-        <br><br>
-        <section class="jumbotron" style="background-image: url('/static/img/mainpic/Skincare.jpg');">
-          <div class="container">
-            <div class="row text-center">
-              <h2>TRiANGLE Cosmetic</h2>
-              <h3>Makeup Power</h3>
-              <!--<a class="btn btn-primary" href="#">See all</a>-->
-=======
+
                 <ul class="nav navbar-nav navbar-right">
                     <!--                    <li><a href="/home/">HOME</a></li>-->
                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/catalog/">CATALOG<span class="caret"></span></a>
@@ -123,7 +94,6 @@ def index(request):
                     </div>
                     <button type="submit" class="btn btn-default btn-summit"><span class="glyphicon glyphicon-search"></span></button>
                 </form>
->>>>>>> beboonn
             </div>
         </div>
     </nav>
