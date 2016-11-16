@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <link rel="shortcut icon" type="image/png" href="/static/img/logo1.png"/>
-  <title>Home - TRiANGLE</title>
-  <meta charset="utf-8" />
 
-  <link href="https://fonts.googleapis.com/css?family=Cabin+Condensed" rel="stylesheet">
-  
-  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" href="/static/css/codebcatalog.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+<head>
+    <link rel="shortcut icon" type="image/png" href="/static/img/logo1.png" />
+    <title>Home - TRiANGLE</title>
+    <meta charset="utf-8" />
+
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Condensed|PT+Sans+Caption|Viga" rel="stylesheet">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/static/css/codebcatalog.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link type="text/css" rel="stylesheet" href="/static/css/style_beboonn.css" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <link type="text/css" rel="stylesheet" href="/static/css/style_beboonn.css">
 
 </head>
 
-<body style="background-color:black">
+<body>
 
     <nav class="navbar navbar-inverse navbar-fixed-top navfont">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/home/" >TRiANGLE
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/home/">TRiANGLE
         <!--<img style="max-width:100px; margin-top: -7px;"
              src="../static/img/logo2.png"/>--></a>
+<<<<<<< HEAD
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
@@ -112,33 +115,217 @@
         <a href="../catalog/?search=fragrance">
           <img src="/static/img/mainpic/Fragrance.jpg" class="hover" />
           <span class="text-content"><span><h1>Fragrance</h1></span></span>
+=======
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <!--                    <li><a href="/home/">HOME</a></li>-->
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/catalog/">CATALOG<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../catalog">All</a></li>
+                            <li><a href="../catalog/skincare">Skincare</a></li>
+                            <li><a href="../catalog/base_makeup">Base Makeup</a></li>
+                            <li><a href='../catalog/point_makeup'>Point Makeup</a></li>
+                            <li><a href="../catalog/accessories">Accessories</a></li>
+                            <li><a href="../catalog/fragrance">Fragrance</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>&nbsp&nbspMEMBER
+          <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/login/"><span class="glyphicon glyphicon-log-in"></span>&nbsp&nbspLog in</a></li>
+                            <li><a href="/register/"><span class="glyphicon glyphicon-edit"></span>&nbsp&nbspSign Up</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-right hover-summit-botton">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default btn-summit"><span class="glyphicon glyphicon-search"></span></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!--navbar-->
+
+    <div id="myCarousel" class="carousel slide" data-ride="carouselx">
+
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+
+        <div class="carousel-inner" role="listbox">
+
+
+
+
+            <section class="jumbotron item active" style="background-image: url('/static/img/mainpic/box_1.png');">
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="triangle-white-box1 col-s12">
+                            <span class="triangle-header-text1">
+          TRiANGLE Cosmetic
+        </span>
+                            <br />
+                            <span class="under-triangle-header">
+          Makeup Power
+        </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="jumbotron item" style="background-image: url('/static/img/mainpic/box_3.png');">
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="triangle-white-box2 col-s12">
+                            <!--
+                            <span class="triangle-header-text2">
+          Money can't buy happiness
+        </span>
+<br>
+<span class="triangle-header-text2">
+                               But It can buy Makeup!
+                           </span>
+-->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
         </a>
-      </div>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+>>>>>>> beboonn
+        </a>
 
     </div>
-    <!--<div class="row text-center">
+
+    <!--    ----triangle header------>
+
+    <section class="container home-picture">
+        <div class="row padding-top-60">
+            <div class="col-sm-4 triangle-img text-center">
+                <div class="hover14">
+                    <a href="../catalog">
+                        <img class="triangle-img-shadow" src="../static/img/mainpic/all_pastel3.jpg" class="hover" />
+                        <!--                    <span class="text-content"><span><h1>All</h1></span></span>-->
+                    </a>
+                </div>
+                <span class="triangle-catalog-text">All</span>
+            </div>
+            <div class="col-sm-4 triangle-img text-center">
+                <div class="hover14">
+                    <a href="../catalog/skincare">
+                        <img class="triangle-img-shadow" src="../static/img/mainpic/SkinCare_pastel2.jpg" class="hover" />
+                        <!--                    <span class="text-content"><span><h1>SkinCare</h1></span></span>-->
+                    </a>
+                </div>
+                <span class="triangle-catalog-text">SkinCare</span>
+            </div>
+            <div class="col-sm-4 triangle-img text-center">
+                <div class="hover14">
+                    <a href="../catalog/base_makeup">
+                        <img class="triangle-img-shadow" src="/static/img/mainpic/BaseMakeup.jpg" class="hover" />
+                        <!--                    <span class="text-content"><span><h1>Base Makeup</h1></span></span>-->
+                    </a>
+                </div>
+                <span class="triangle-catalog-text">Base Makeup</span>
+            </div>
+        </div>
+        <div class="row padding-top-60">
+            <div class="col-sm-4 triangle-img text-center">
+                <div class="hover14">
+                    <a href="../catalog/point_makeup">
+                        <img class="triangle-img-shadow" src="../static/img/mainpic/PointMakeup_pastel.jpg" class="hover" />
+                        <!--                    <span class="text-content"><span><h1>Point Makeup</h1></span></span>-->
+                    </a>
+                </div>
+                <span class="triangle-catalog-text">Point Makeup</span>
+            </div>
+            <div class="col-sm-4 triangle-img text-center">
+                <div class="hover14">
+                    <a href="../catalog/accessories">
+                        <img class="triangle-img-shadow" src="../static/img/mainpic/acc_pastel.png" class="hover" />
+                        <!--                    <span class="text-content"><span><h1>Accessories</h1></span></span>-->
+                    </a>
+                </div>
+                <span class="triangle-catalog-text">Accessories</span>
+
+            </div>
+            <div class="col-sm-4 triangle-img text-center">
+                <div class="hover14">
+                    <a href="../catalog/fragrance">
+                        <img class="triangle-img-shadow" src="/static/img/mainpic/Fragrance.jpg" class="hover" />
+                        <!--                    <span class="text-content"><span><h1>Fragrance</h1></span></span>-->
+                    </a>
+                </div>
+                <span class="triangle-catalog-text">Fragrance</span>
+
+            </div>
+
+        </div>
+        <!--<div class="row text-center">
       <a class="btn btn-secondary" href="#">View Complete Catalogue</a>
     </div>-->
-  </section>
-  <footer class="container">
-    <div class="row">
-      <p class="col-sm-4">&copy; 2016 Skillfair</p>
-      <ul class="col-sm-8">
-        <li class="col-sm-1">
-          <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/twitter.svg">
-        </li>
-        <li class="col-sm-1">
-          <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/facebook.svg">
-        </li>
-        <li class="col-sm-1">
-          <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/instagram.svg">
-        </li>
-        <li class="col-sm-1">
-          <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/medium.svg">
-        </li>
-      </ul>
-    </div>
-  </footer>
+    </section>
+
+    <!--
+    <footer class="container">
+        <div class="row">
+            <p class="col-sm-4">&copy; 2016 Beboonn</p>
+            <ul class="col-sm-8">
+                <li class="col-sm-2">
+                                        <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/twitter.svg">
+                    <span>about us</span>
+                </li>
+                <li class="col-sm-1">
+                    <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/facebook.svg">
+                </li>
+                <li class="col-sm-1">
+                    <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/instagram.svg">
+                </li>
+                <li class="col-sm-1">
+                    <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/medium.svg">
+                </li>
+            </ul>
+        </div>
+    </footer>
+-->
+
+    <footer class="text-center">
+        <!--
+        <a class="up-arrow" href="/home" data-toggle="tooltip" title="TO TOP">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a>
+-->
+        <div class="col-sm-6">
+            <a href="#">ABOUT US</a>
+            <br>
+            <span>...............</span>
+            <br>
+            <span>..............</span>
+            <br>
+            <span>..............</span>
+        </div>
+        <div class="col-sm-6">
+            <span>Contact Us</span>
+        </div>
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+                    // Initialize Tooltip
+                    $('[data-toggle="tooltip"]').tooltip();
+    </script>
+
 </body>
 
 </html>

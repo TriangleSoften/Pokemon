@@ -63,7 +63,7 @@ section .row img {
   margin: 0 0 30px;
 }
 
-.btn.btn-primary {
+/*.btn.btn-primary {
   border-radius: 2px;
   border: 0px;
   color: #fbd1d5;
@@ -74,7 +74,7 @@ section .row img {
 .btn.btn-primary:hover {
   color: #ffffff;
   background-color: #fbd1d5;
-}
+}*/
 
 .btn-secondary {
   background-color: #E8DFE0;
@@ -294,7 +294,7 @@ span.text-content span {
 }
 
 div.dropdown p{
-  
+
 }
 
 div.dropdown a{
