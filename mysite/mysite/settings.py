@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'w7bjmfcr9)$dq2ixnioxl341aqrfvs4d=@ru#kduoo&chuq*e)'
+SECRET_KEY = 'syg27&%h0#jiy4tprl0oj*2uv^2tky$+84fm(k)euw^y&rnz-s'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,9 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'register',
-    'Triangle',
-    'catalog',
 ]
 
 MIDDLEWARE = [
@@ -78,10 +75,10 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.dummy',
-        'NAME': 'GithubTriangle',
-        'USER': 'Github',
-        'PASSWORD': 'password',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mysite',
+        'USER': 'root',
+        'PASSWORD': '153759',
         'HOST': 'localhost',
         'PORT': '3306',
     }
@@ -124,13 +121,4 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
-
 STATIC_URL = '/static/'
-
-STATICFILES_DIRS = [
-    #normpath(join(SITE_ROOT, 'static')),
-    os.path.join(BASE_DIR, "static"),
-    #'/Users/booranasit/Desktop/Django/Pokemon/mysite/asset',
-]
-
-STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_cdn")

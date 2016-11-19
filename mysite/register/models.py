@@ -10,4 +10,4 @@ class UserData(models.Model):
 	phonenum = models.CharField(max_length=45)
 	class Meta:
 		db_table = "userdata"		
- 		app_label = 'Users' 
+ 		app_label = 'UserData' 
