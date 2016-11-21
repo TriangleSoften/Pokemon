@@ -14,4 +14,5 @@ class Product(models.Model):
 	Pdetail = models.CharField(max_length=200);
 
 	class Meta:
+		app_label = "Product"
 		db_table = "product";
