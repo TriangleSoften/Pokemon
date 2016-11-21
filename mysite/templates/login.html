@@ -133,11 +133,11 @@
     <div class="container">
 
         <!--    -------->
-
+        {% if isfail %}
         <div class="alert error-box">
             <strong class="msg">Username or password incorrect.</strong> Please try again.
             <a class="toggle-alert" href="#">Toggle</a>
-
+        {% endif %}
         </div>
 
         <!--    -------->

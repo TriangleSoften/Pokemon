@@ -135,12 +135,13 @@
 
 
                 <!--               ------------>
-
+                {% ifequal failmsg "" %}
+                {% else %}
                 <div class="alert error-box">
-                    <strong class="msg">'''+msg+'''</strong> Please try again.
+                    <strong class="msg">{{ failmsg }}</strong> Please try again.
                     <a class="toggle-alert" href="#">Toggle</a>
                 </div>
-
+                {% endifequal %}
 
                 <!--                ----------->
 
