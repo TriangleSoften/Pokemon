@@ -177,11 +177,20 @@ footer a:hover {
 /*------catalog------*/
 
 .triangle-product {
-    font-family: 'PT Sans Caption', sans-serif;
+    font-family: 'Slabo 27px', serif;
+    margin-top: 45px;
 }
 
 .triangle-product span {
-    font-size: 25px;
+    font-size: 20px;
+}
+
+.triangle-eachpord {
+    height: 750px;
+}
+
+.triangle-imgpord {
+    margin-bottom: 160px;
 }
 
 .triangle-prodid {
@@ -198,8 +207,14 @@ footer a:hover {
 }
 
 .triangle-price {
+    font-family: 'Anton', sans-serif;
     color: #FFA09E;
-    font-size: 30px;
+    font-size: 30px !important;
+}
+
+.triangle-status {
+    margin-left: 80px;
+    font-size: 25px !important;
 }
 
 .sold-out {
@@ -208,6 +223,17 @@ footer a:hover {
 
 .in-stock {
     color: limegreen;
+}
+
+.btn-addtocart {
+    background: #DFA5A4;
+    font-size: 20px !important;
+    box-shadow: 0px 2px 4px 0px #B39494;
+}
+
+.btn-addtocart:hover {
+    background: #D8817E !important;
+    box-shadow: 0px 2px 4px 0px #705352;
 }
 
 

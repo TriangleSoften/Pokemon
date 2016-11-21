@@ -8,7 +8,7 @@
         <title>Catalog All - TRiANGLE</title>
         <meta charset="utf-8" />
 
-        <link href="https://fonts.googleapis.com/css?family=Cabin+Condensed|PT+Sans+Caption|Viga" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cabin+Condensed|PT+Sans+Caption|Viga|Slabo+27px|Anton" rel="stylesheet">
 
         <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="/static/css/codebcatalog.css">
@@ -138,26 +138,17 @@
             <div class="row triangle-product">
                 <div class="row-xs-height">
                     {% for obj in object_list %}
-                    <div class="col-xs-4 col-height" style="height: 600px;">
-                        <img src="/static/img/Photo_Product/{{ obj.Ppicture }}" />
-                        <p style="height: 160px;">
-                            <span class="triangle-prodid">ProductID : </span>#{{ obj.Pid }}
-                            <!--                        <br/>-->
-                            <span class="triangle-prod">Product : </span>{{ obj.Pname }}
-                            <br/>
-                            <span class="triangle-brand">Brand : </span>{{ obj.Pbrand }}
-                            <br/>
-                            <span class="triangle-type">Type : </span>{{ obj.Ptype }}
-                            <br/>
-                            <span class="triangle-price">Price : </span>{{ obj.Pprice }}<span> THB</span>
-                            <br/> {% ifequal obj.Pamount 0 %}
-                            <!--                        <span>Stock : </span> -->
-                            <span class="sold-out triangle-status">Sold out </span>
-                            <br/> {% else %}
-                            <!--                        <span>Stock : </span> -->
-                            <span class="in-stock triangle-status">In Stock </span>
-                            <br/> {% endifequal %}
-                        </p>
+                    <div class="col-xs-4 col-height triangle-eachpord">
+                        <img class="triangle-imgprod" src="../static/img/Photo_Product/{{ obj.Ppicture }}" />
+                        <span class="triangle-prodid">{{ obj.Pid }}</span>
+                        <span class="triangle-prod">{{ obj.Pname }}</span>
+                        <br/>
+                        <span class="triangle-price">{{ obj.Pprice }}</span>{% ifequal obj.Pamount 0 %}
+                        <span class="sold-out triangle-status">Sold out </span>{% else %}
+                        <span class="in-stock triangle-status">In Stock </span>{% endifequal %}
+                        <br/>
+                        <button class="btn btn-addtocart"><span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+                        </button>
                     </div>
                     {% endfor %}
                 </div>
