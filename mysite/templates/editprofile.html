@@ -127,26 +127,74 @@
         <!--    ----triangle header------>
         {% for data in user_data %}
         <div class="text-center login login-box">
-            <h2>Profile</h2>
+            <h2>Edit Profile</h2>
         </div>
         <br>
         <div class="container">
-            <span class="username">Username : </span>{{ data.username }}<br>
-            <span class="userFirstname">Firstname : </span>{{ firstname }}<br>
-            <span class="userLastname">Lastname : </span>{{ lastname }}<br>
-            <span class="userEmail">Email : </span>{{ email }}<br>
-            <span class="userGender">Gender : </span>{{ data.gender }}<br>
-            <span class="userBD">Date of Birth : </span>{{ data.dateofbirth }}<br>
-            <span class="userphoneno">Phone Number : </span>{{ data.phonenum }}<br>
-            <span class="userAddress">Address : </span>{{ data.address }}<br>
+            <form class="form-horizontal login-form" method="post" name="submit_form" id="submit_form" action="/profile/updatepro/">
+
+
+                <!--               ------------>
+
+
+                <div class="form-group">
+                    <label class="control-label col-xs-2" for="username">Username:</label> {{ data.username }}
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-xs-2" for="firstName">First Name:</label> 
+                    <div class="col-xs-2">
+                        <input type="text" class="form-control" name="firstName" id="firstName" value="{{ firstname }}">
+                    </div>
+                    
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-xs-2" for="lastName">Last Name:</label>
+                    <div class="col-xs-2">
+                        <input type="text" class="form-control" name="lastName" id="lastName" value="{{ lastname }}">
+                    </div>
+                </div>                
+
+                <div class="form-group">
+                    <label class="control-label col-xs-2" for="email">Email Address:</label> {{ email }}
+                    
+                </div>
+
+            
+
+                <div class="form-group">
+                    <label class="control-label col-xs-2" for="gender">Gender:</label> {{ data.gender }}
+                    
+                </div>            
+
+                <div class="form-group">
+                    <label class="control-label col-xs-2" for="phone">Phone Number:</label>
+                    <div class="col-xs-2">
+                        <input type="text" class="form-control" name="phone" id="phone" value="{{ data.phonenum }}">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-xs-2" for="address">Address:</label>
+                    <div class="col-xs-3">
+                        <textarea class="form-control" rows="3" name="address" id="address">{{ data.address }}</textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-signin" value="Submit">Submit</button>
+                        <a href="/profile?" button type="button" class="btn btn-default btn-create" value="Cancel">Cancel</a>
+                    </div>
+                </div>
+
+
+
+            </form>
         </div>
         {% endfor %}
-        <div class="form-group">
-          <div class="col-sm-offset-2 col-sm-10">
-            <a href="/profile/editprofile"><button type="edit" class="btn btn-default" value="Edit Profile">Edit Profile</button></a>
-            <a href="/profile/editpassword/"><button type="edit" class="btn btn-default" value="Edit Password">Edit Password</button></a>
-          </div>
-        </div>
+        
 
         <footer class="text-center">
             <!--
@@ -154,7 +202,7 @@
             <span class="glyphicon glyphicon-chevron-up"></span>
         </a>
 
--->
+
             <div class="col-sm-6">
                 <a href="#">ABOUT US</a>
                 <br>
