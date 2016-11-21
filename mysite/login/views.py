@@ -12,6 +12,7 @@ from django.shortcuts import render
 def index(request):
 
 	logout(request)
+	
 	context = {
     "isfail": False,
   }
