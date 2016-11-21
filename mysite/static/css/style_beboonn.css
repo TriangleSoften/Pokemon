@@ -40,6 +40,13 @@ footer a:hover {
     color: #FAFAFA !important;
 }
 
+.navbar-brand > img {
+    max-height: 100%;
+    height: 100%;
+    width: auto;
+    margin: 0 auto;
+}
+
 .navbar-brand {
     font-size: 30px;
     position: relative;

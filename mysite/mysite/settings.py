@@ -75,7 +75,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.dummy',
         'NAME': 'GithubTriangle',
         'USER': 'Github',
         'PASSWORD': 'password',
@@ -131,9 +131,3 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_cdn")
-
-
-
-
-
-
