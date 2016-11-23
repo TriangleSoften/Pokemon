@@ -48,7 +48,7 @@
                             </ul>
                         </li>
                         {% ifequal logged 1 %}
-                        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+                        <li><a href="../cart"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>{{ user }}
           <span class="caret"></span></a>
@@ -145,10 +145,13 @@
                         <br/>
                         <span class="triangle-price">{{ obj.Pprice }}</span>{% ifequal obj.Pamount 0 %}
                         <span class="sold-out triangle-status">Sold out </span>{% else %}
-                        <span class="in-stock triangle-status">In Stock </span>{% endifequal %}
+                        <span class="in-stock triangle-status">In Stock </span>
                         <br/>
-                        <button class="btn btn-addtocart"><span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
-                        </button>
+						<form class="navbar-form navbar-right hover-summit-botton" method="post" action = "../cart/addToCart/?Pid={{obj.Pid}}">
+							<button class="btn btn-addtocart"><span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+							</button>
+						 </form>
+						{% endifequal %}
                     </div>
                     {% endfor %}
                 </div>
