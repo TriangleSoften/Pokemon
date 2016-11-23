@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'register',
     'Triangle',
     'catalog',
+	'cart',
 ]
 
 MIDDLEWARE = [
@@ -75,10 +76,10 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.dummy',
-        'NAME': 'GithubTriangle',
-        'USER': 'Github',
-        'PASSWORD': 'password',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mydatabase',
+        'USER': 'root',
+        'PASSWORD': '1234',
         'HOST': 'localhost',
         'PORT': '3306',
     }

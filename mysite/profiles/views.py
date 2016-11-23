@@ -22,6 +22,7 @@ def index(request):
 	print (em)
 
 	context = {
+		"user" :userin,
 		"user_data": queryset,
 		"firstname": fname,
 		"lastname": lname,
@@ -42,6 +43,7 @@ def editpro(request):
 	print (em)
 
 	context = {
+		"user" :userin,
 		"user_data": queryset,
 		"firstname": fname,
 		"lastname": lname,
@@ -73,6 +75,7 @@ def updatepro(request):
 def editpass(request):
 
 	context = {
+		"user" :userin,
 		"isfail": False,
 	}
 	return render(request, "editpassword.html", context)
