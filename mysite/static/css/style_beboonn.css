@@ -349,3 +349,11 @@ footer a:hover {
 .download-box {
     background: #a555ca url(images/download.png) no-repeat 14px 14px;
 }
+
+
+/*-----carts-----*/
+
+.triangle-cart-table {
+    font-family: 'Slabo 27px', serif;
+    margin-top: 45px;
+}
