@@ -133,8 +133,8 @@
         <!--    ---triangle header----->
         <div class="container">
             <div class="row">
-                <div class="col-sm-12 col-md-10 col-md-offset-1 table-responsive">
-                    <table class="table table-myhover triangle-cart-table">
+                <div class="col-sm-12 col-md-10 col-md-offset-1">
+                    <table class="table triangle-cart-table">
                         <thead class="thead-color">
                             <tr>
                                 <th>Product</th>
@@ -147,7 +147,7 @@
                         <tbody>
 
                             {% for obj in object_list %}
-                            <tr>
+                            <tr class="table-myhover">
                                 <td class="col-sm-8 col-md-6">
                                     <div class="media">
                                         <a class="thumbnail pull-left" href="#"> <img class="media-object" src="/static/img/Photo_Product/{{ obj.Ppicture }}" style="width: 72px; height: 72px;"> </a>
@@ -165,7 +165,7 @@
 
                                     <input type="number" min="1" step="1" class="form-control" id="amount{{obj.Pid}}" value="1" onchange="calculateSubtotal{{obj.Pid}}(this.value)">
                                     <script>
-                                        function calculateSubtotal {{obj.Pid}}(val) {
+                                        function calculateSubtotal{{obj.Pid}}(val) {
                                             var x = parseInt(val)
                                             var now = document.getElementById("total1").value
                                             if (now === undefined) now = 0
@@ -189,7 +189,7 @@
                             </tr>
                             {%endfor%}
 
-                            <tr>
+                            <tr class="table-myhover">
                                 <td>   </td>
                                 <td>   </td>
                                 <td>   </td>
@@ -216,7 +216,7 @@
                                     document.getElementById("shipping").value = x
                                 }
                             </script>
-                            <tr>
+                            <tr class="table-myhover">
                                 <td>   </td>
                                 <td>   </td>
                                 <td>   </td>
@@ -224,7 +224,7 @@
                                     <h5>Estimated shipping</h5></td>
                                 <td class="text-right" id="shipping"></td>
                             </tr>
-                            <tr>
+                            <tr class="table-myhover">
                                 <td>   </td>
                                 <td>   </td>
                                 <td>   </td>
@@ -242,10 +242,10 @@
                             </script>
                             {% for obj in object_list %}
                             <script>
-                                calculateSubtotal {{obj.Pid}}(1)
+                                calculateSubtotal{{obj.Pid}}(1)
                             </script>
                             {%endfor%}
-                            <tr>
+                            <tr class="table-myhover">
                                 <td>   </td>
                                 <td>   </td>
                                 <td>   </td>
