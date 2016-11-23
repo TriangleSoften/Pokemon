@@ -358,3 +358,13 @@ footer a:hover {
     position: relative;
     top: 45px;
 }
+
+.thead-color {
+  background-color: #563935;
+  color: #f5f5f5;
+}
+
+.table-myhover {
+  background-color: #FFA09E;
+  color: #000;
+}
