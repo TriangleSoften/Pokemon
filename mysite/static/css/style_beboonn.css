@@ -355,5 +355,6 @@ footer a:hover {
 
 .triangle-cart-table {
     font-family: 'Slabo 27px', serif;
-    margin-top: 45px;
+    position: relative;
+    top: 45px;
 }
