@@ -357,6 +357,8 @@ footer a:hover {
     font-family: 'Slabo 27px', serif;
     position: relative;
     top: 45px;
+	background-color: #E7DFD0;
+	
 }
 
 .thead-color {
@@ -365,6 +367,14 @@ footer a:hover {
 }
 
 .table-myhover:hover {
-  background-color: #FFA09E;
+  background-color: #F7CFC0;
   color: #000;
+}
+.btn-remove-color{
+	background: #C94451;
+	color: #FFFFFF;
+}
+.btn-remove-color:hover{
+	background: #CE0000;
+	border: 1px solid #CE6B71;
 }

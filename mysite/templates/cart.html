@@ -141,11 +141,10 @@
                                 <th>Quantity</th>
                                 <th class="text-center">Price</th>
                                 <th class="text-center">Total</th>
-                                <th> </th>
+                                <th> </th>
                             </tr>
                         </thead>
                         <tbody>
-
                             {% for obj in object_list %}
                             <tr class="table-myhover">
                                 <td class="col-sm-8 col-md-6">
@@ -162,11 +161,11 @@
                                     </div>
                                 </td>
                                 <td class="col-sm-1 col-md-1" style="text-align: center">
-
                                     <input type="number" min="1" step="1" class="form-control" id="amount{{obj.Pid}}" value="1" onchange="calculateSubtotal{{obj.Pid}}(this.value)">
                                     <script>
                                         function calculateSubtotal{{obj.Pid}}(val) {
                                             var x = parseInt(val)
+											if(x>0){
                                             var now = document.getElementById("total1").value
                                             if (now === undefined) now = 0
                                             var del = document.getElementById("subtotal{{obj.Pid}}").value
@@ -177,31 +176,31 @@
                                             calculatetotal(now, del, add)
                                             calculateShipping()
                                             calculatetotal2()
+											}
                                         }
                                     </script>
                                 </td>
-                                <td class="col-sm-1 col-md-1 text-center"><strong>{{ obj.Pprice }}</strong></td>
+                                <td class="col-sm-1 col-md-1 text-center"><strong>฿{{ obj.Pprice }}</strong></td>
                                 <td class="col-sm-1 col-md-1 text-center" id="subtotal{{obj.Pid}}"></td>
                                 <td class="col-sm-1 col-md-1">
-                                    <form class="navbar-form navbar-right hover-summit-botton" method="post" action="../cart/remove/?Pid={{obj.Pid}}">
-                                        <button type="submit" class="btn btn-default btn-summit"><span>Remove</span></button>
+                                    <form class="navbar-form  hover-summit-botton" method="post" action="../cart/remove/?Pid={{obj.Pid}}">
+                                        <button type="submit" class="btn btn-default btn-summit btn-remove-color"><span>Remove</span></button>
                                     </form>
                             </tr>
                             {%endfor%}
-
                             <tr class="table-myhover">
-                                <td>   </td>
-                                <td>   </td>
-                                <td>   </td>
+                                <td>   </td>
+                                <td>   </td>
+                                <td>   </td>
                                 <td>
                                     <h5>Subtotal</h5></td>
-                                <td class="text-right" id="total1" value="0"></td>
+                                <text>฿</text><td class="text-right" id="total1" value="0"></td>
                                 <script>
                                     function calculatetotal(now, del, add) {
                                         var x = parseInt(now)
                                         var y = parseInt(add)
                                         var z = parseInt(del)
-                                        document.getElementById("total1").innerHTML = x + y - z
+                                        document.getElementById("total1").innerHTML = x+y-z
                                         document.getElementById("total1").value = x + y - z
                                     }
                                 </script>
@@ -217,17 +216,17 @@
                                 }
                             </script>
                             <tr class="table-myhover">
-                                <td>   </td>
-                                <td>   </td>
-                                <td>   </td>
+                                <td>   </td>
+                                <td>   </td>
+                                <td>   </td>
                                 <td>
                                     <h5>Estimated shipping</h5></td>
                                 <td class="text-right" id="shipping"></td>
                             </tr>
                             <tr class="table-myhover">
-                                <td>   </td>
-                                <td>   </td>
-                                <td>   </td>
+                                <td>   </td>
+                                <td>   </td>
+                                <td>   </td>
                                 <td>
                                     <h3>Total</h3></td>
                                 <td class="text-right" id="total2"></td>
@@ -246,12 +245,12 @@
                             </script>
                             {%endfor%}
                             <tr class="table-myhover">
-                                <td>   </td>
-                                <td>   </td>
-                                <td>   </td>
+                                <td>   </td>
+                                <td>   </td>
+                                <td>   </td>
                                 <td>
-                                    <a type="button" class="btn btn-default" href="../catalog/">
-                                        <span class="glyphicon glyphicon-shopping-cart"></span> Continue Shopping
+                                    <a type="button" class="btn btn-default " href="../catalog/">
+                                        <span class="glyphicon glyphicon-shopping-cart "></span> Continue Shopping
                                     </a>
                                 </td>
                                 <td>
@@ -265,7 +264,6 @@
                 </div>
             </div>
         </div>
-
         <footer class="text-center">
             <!--
         <a class="up-arrow" href="/home" data-toggle="tooltip" title="TO TOP">
@@ -291,8 +289,6 @@
                         // Initialize Tooltip
                         $('[data-toggle="tooltip"]').tooltip();
         </script>
-
     </body>
-
 </html>
 >>>>>>> beboonn
