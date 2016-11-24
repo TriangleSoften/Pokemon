@@ -11,6 +11,8 @@ from catalog.models import *
 
 def index(request):
 	userin=request.user.username
+	if(userin ==""):
+		return HttpResponseRedirect('/login/')
 	cart = CartItem.objects.filter(username=userin)
 	cartitem = Product.objects.none()
 	item = list(cartitem)
