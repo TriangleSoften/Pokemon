@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <head>
+
+        <link rel="shortcut icon" type="image/png" href="/static/img/logo1.png" />
+        <title>Cart - TRiANGLE</title>
+        <meta charset="utf-8" />
+
+        <link href="https://fonts.googleapis.com/css?family=Cabin+Condensed|PT+Sans+Caption|Viga|Slabo+27px|Anton" rel="stylesheet">
+
+        <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="/static/css/codebcatalog.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link type="text/css" rel="stylesheet" href="/static/css/style_beboonn.css">
+    </head>
+
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top navfont">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="/home" class="navbar-brand pull-left"><img style="height:45px" src="../static/img/Triangle-LOGO_w2.png"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <!--                    <li><a href="/home/">HOME</a></li>-->
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/catalog/">CATALOG<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../catalog">All</a></li>
+                                <li><a href="../catalog/?search=skincare">Skincare</a></li>
+                                <li><a href="../catalog/?search=base makeup">Base Makeup</a></li>
+                                <li><a href='../catalog/?search=point makeup'>Point Makeup</a></li>
+                                <li><a href="../catalog/?search=accessories">Accessories</a></li>
+                                <li><a href="../catalog/?search=fragrance">Fragrance</a></li>
+                            </ul>
+                        </li>
+                        {% ifequal logged 1 %}
+                        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>{{ user }}
+          <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/profile/"><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;Profile</a></li>
+                                <li><a href="/login/"><span class="glyphicon glyphicon-log-in"></span>&nbsp;&nbsp;Log Out</a></li>
+                            </ul>
+                        </li>
+                        {% else %}
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;MEMBER
+          <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/login/"><span class="glyphicon glyphicon-log-in"></span>&nbsp;&nbs;pLog in</a></li>
+                                <li><a href="/register/"><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;Sign Up</a></li>
+                            </ul>
+                        </li>
+                        {% endifequal %}
+                    </ul>
+                    <form class="navbar-form navbar-right hover-summit-botton" method="post" action="../catalog/?">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="search" id="search" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default btn-summit"><span class="glyphicon glyphicon-search"></span></button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- navbar -->
+
+        <div id="myCarousel" class="carousel slide" data-ride="carouselx">
+
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+
+            <div class="carousel-inner" role="listbox">
+                <section class="jumbotron item active" style="background-image: url('/static/img/mainpic/box_1.png');">
+                    <div class="container">
+                        <div class="row text-center">
+                            <div class="triangle-white-box1 col-s12">
+                                <span class="triangle-header-text1">
+          TRiANGLE Cosmetic
+        </span>
+                                <br />
+                                <span class="under-triangle-header">
+          Makeup Power
+        </span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="jumbotron item" style="background-image: url('/static/img/mainpic/box_3.png');">
+                    <div class="container">
+                        <div class="row text-center">
+                            <div class="triangle-white-box2 col-s12">
+                                <!--
+                            <span class="triangle-header-text2">
+          Money can't buy happiness
+        </span>
+<br>
+<span class="triangle-header-text2">
+                               But It can buy Makeup!
+                           </span>
+-->
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+
+        </div>
+
+        <!--    ---triangle header----->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-10 col-md-offset-1">
+                    <table class="table triangle-cart-table">
+                        <thead class="thead-color">
+                            <tr>
+                                <th>Product</th>
+                                <th>Quantity</th>
+                                <th class="text-center">Price</th>
+                                <th class="text-center">Total</th>
+                                <th> </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for obj in object_list %}
+                            <tr class="table-myhover">
+                                <td class="col-sm-8 col-md-6">
+                                    <div class="media">
+                                        <a class="thumbnail pull-left" href="#"> <img class="media-object" src="/static/img/Photo_Product/{{ obj.Ppicture }}" style="width: 72px; height: 72px;"> </a>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">{{ obj.Pname }}</h4>
+                                            <span>Status: </span><span class="text-success">
+								{% ifequal obj.Pamount 0 %}
+								 <span class="sold-out triangle-status">Sold out </span> {% else %}
+                                            <span class="in-stock triangle-status">In Stock </span> {% endifequal %}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="col-sm-1 col-md-1" style="text-align: center">
+                                    <input type="number" min="1" step="1" class="form-control" id="amount{{obj.Pid}}" value="1" onchange="calculateSubtotal{{obj.Pid}}(this.value)">
+                                    <script>
+                                        function calculateSubtotal{{obj.Pid}}(val) {
+                                            var x = parseInt(val)
+											if(x>0){
+                                            var now = document.getElementById("total1").value
+                                            if (now === undefined) now = 0
+                                            var del = document.getElementById("subtotal{{obj.Pid}}").value
+                                            if (del === undefined) del = 0
+                                            var add = x * {{obj.Pprice}}
+                                            document.getElementById("subtotal{{obj.Pid}}").innerHTML = add
+                                            document.getElementById("subtotal{{obj.Pid}}").value = add
+                                            calculatetotal(now, del, add)
+                                            calculateShipping()
+                                            calculatetotal2()
+											}
+                                        }
+                                    </script>
+                                </td>
+                                <td class="col-sm-1 col-md-1 text-center"><strong>฿{{ obj.Pprice }}</strong></td>
+                                <td class="col-sm-1 col-md-1 text-center" id="subtotal{{obj.Pid}}"></td>
+                                <td class="col-sm-1 col-md-1">
+                                    <form class="navbar-form  hover-summit-botton" method="post" action="../cart/remove/?Pid={{obj.Pid}}">
+                                        <button type="submit" class="btn btn-default btn-summit btn-remove-color"><span>Remove</span></button>
+                                    </form>
+                            </tr>
+                            {%endfor%}
+                            <tr class="table-myhover">
+                                <td>   </td>
+                                <td>   </td>
+                                <td>   </td>
+                                <td>
+                                    <h5>Subtotal</h5></td>
+                                <text>฿</text><td class="text-right" id="total1" value="0"></td>
+                                <script>
+                                    function calculatetotal(now, del, add) {
+                                        var x = parseInt(now)
+                                        var y = parseInt(add)
+                                        var z = parseInt(del)
+                                        document.getElementById("total1").innerHTML = x+y-z
+                                        document.getElementById("total1").value = x + y - z
+                                    }
+                                </script>
+                            </tr>
+                            <script>
+                                function calculateShipping() {
+                                    total1 = document.getElementById("total1").value
+                                    var x = 0
+                                    if (total1 < 1000) x = 100
+                                    if (total1 < 500) x = 150
+                                    document.getElementById("shipping").innerHTML = x
+                                    document.getElementById("shipping").value = x
+                                }
+                            </script>
+                            <tr class="table-myhover">
+                                <td>   </td>
+                                <td>   </td>
+                                <td>   </td>
+                                <td>
+                                    <h5>Estimated shipping</h5></td>
+                                <td class="text-right" id="shipping"></td>
+                            </tr>
+                            <tr class="table-myhover">
+                                <td>   </td>
+                                <td>   </td>
+                                <td>   </td>
+                                <td>
+                                    <h3>Total</h3></td>
+                                <td class="text-right" id="total2"></td>
+                            </tr>
+                            <script>
+                                function calculatetotal2() {
+                                    var total1 = document.getElementById("total1").value
+                                    var shipping = document.getElementById("shipping").value
+                                    document.getElementById("total2").innerHTML = total1 + shipping
+                                    document.getElementById("total2").value = total1 + shipping
+                                }
+                            </script>
+                            {% for obj in object_list %}
+                            <script>
+                                calculateSubtotal{{obj.Pid}}(1)
+                            </script>
+                            {%endfor%}
+                            <tr class="table-myhover">
+                                <td>   </td>
+                                <td>   </td>
+                                <td>   </td>
+                                <td>
+                                    <a type="button" class="btn btn-default " href="../catalog/">
+                                        <span class="glyphicon glyphicon-shopping-cart "></span> Continue Shopping
+                                    </a>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success">
+                                        Checkout <span class="glyphicon glyphicon-play"></span>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <footer class="text-center">
+            <!--
+        <a class="up-arrow" href="/home" data-toggle="tooltip" title="TO TOP">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a>
+-->
+            <div class="col-sm-6">
+                <a href="#">ABOUT US</a>
+                <br>
+                <span>...............</span>
+                <br>
+                <span>..............</span>
+                <br>
+                <span>..............</span>
+            </div>
+            <div class="col-sm-6">
+                <span>Contact Us</span>
+            </div>
+        </footer>
+
+        <script>
+            $(document).ready(function () {
+                        // Initialize Tooltip
+                        $('[data-toggle="tooltip"]').tooltip();
+        </script>
+    </body>
+</html>
+>>>>>>> beboonn
