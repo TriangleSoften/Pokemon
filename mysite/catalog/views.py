@@ -1,31 +1,33 @@
 from django.http import HttpResponse
+from django.shortcuts import HttpResponseRedirect
 from django.shortcuts import render
 from models import Product
 from django.views.decorators.csrf import csrf_exempt
+from django.db import connection
 from django.db.models import Q
 # Create your views here.
 @csrf_exempt
 def allcatalog(request):
-	if(request.method=='GET'):
-		_search = request.GET.get('search','')
-	else:
-		_search = request.POST.get('search','')
-	if(_search != ''): 
-		queryset = Product.objects.filter(Q(Ptype__icontains=_search) | Q(Pname__icontains=_search) | Q(Pprice__icontains=_search) | Q(Pbrand__icontains=_search) | Q(Pid__icontains=_search))
-	else: 
-		queryset = Product.objects.all()
-	userin=request.user.username
-	if (userin == ""):
-		logged = 0
-	else :
-		logged = 1
-	context = {
-		"object_list": queryset, 
-		"title": "List",
-		"user": userin,
-		"logged": logged,
-	}
-	return render(request, "catalog.html", context)
+    if(request.method=='GET'):
+        _search = request.GET.get('search','')
+    else:
+        _search = request.POST.get('search','')
+    if(_search != ''): 
+        queryset = Product.objects.filter(Q(Ptype__icontains=_search) | Q(Pname__icontains=_search) | Q(Pprice__icontains=_search) | Q(Pbrand__icontains=_search) | Q(Pid__icontains=_search))
+    else: 
+        queryset = Product.objects.all()
+    userin=request.user.username
+    if (userin == ""):
+        logged = 0
+    else :
+        logged = 1
+    context = {
+        "object_list": queryset, 
+        "title": "List",
+        "user": userin,
+        "logged": logged,
+    }
+    return render(request, "catalog.html", context)
 
 
 
@@ -86,8 +88,8 @@ def index(request):
                 <div class="menu-item active active-three-row" style="width:100%;">
                     <h4><a href="#"><span class="glyphicon glyphicon-briefcase"></span>&nbsp&nbspProduct</a></h4>
                     <ul class="active-sub">
-                        <li><a href="#">All Products</a></li>
-                        <li><a style="color: #FFA09E;" href="addproduct-admin.html">Add Product</a></li>
+                        <li><a href="./../select/">All Products</a></li>
+                        <li><a style="color: #FFA09E;" href="./../addproduct/">Add Product</a></li>
                         <li><a href="#">Out of stock</a></li>
                     </ul>
                 </div>
@@ -333,7 +335,9 @@ th, td {
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
-</style>   
+tr:nth-child(even){background-color: #bfa36d}
+</style>  
+
 </head>
 
 <body>
@@ -362,26 +366,27 @@ th, td {
     <!--sidebar-->
     <div class="container-fluid">
         <div class="row content" style="margin-top: 50px;">
-            <div class="col-md-2 sidenav">
+                <div class="col-md-2 Sidebar" style="background-color: #563935;padding-top: 2px;margin-bottom: 0px;padding-bottom: 15px;">
+
 
                   <div style="margin-top: 40px;">
                   </div>
 
-                <div class="menu-item alpha">
+                <div class="menu-item alpha" style="width:100%;">
                      <h4><a href="home-admin.html"><span class="glyphicon glyphicon-home"></span>&nbsp&nbspHome</a></h4>
                         <p>Welcome Admin!!</p>
                 </div>
 
-                <div class="menu-item active active-three-row">
+                <div class="menu-item active active-three-row" style="width:100%;">
                     <h4><a href="#"><span class="glyphicon glyphicon-briefcase"></span>&nbsp&nbspProduct</a></h4>
                     <ul class="active-sub">
-                        <li><a href="#">All Products</a></li>
-                        <li><a style="color: #FFA09E;" href="addproduct-admin.html">Add Product</a></li>
+                        <li><a style="color: #FFA09E;" href="./../select/">All Products</a></li>
+                        <li><a href="./../addproduct/">Add Product</a></li>
                         <li><a href="#">Out of stock</a></li>
                     </ul>
                 </div>
 
-                <div class="menu-item four-row">
+                <div class="menu-item four-row" style="width:100%;">
                     <h4><a href="#"><span class="glyphicon glyphicon-th-list"></span>&nbsp&nbspOrder</a></h4>
                     <ul class="inactive">
                         <li><a href="#">All Orders</a></li>
@@ -391,7 +396,7 @@ th, td {
                     </ul>
                 </div>
 
-                <div class="menu-item three-row">
+                <div class="menu-item three-row" style="width:100%;">
                     <h4><a href="#"><span class="glyphicon glyphicon-tags"></span>&nbsp&nbspPromotion</a></h4>
                     <ul class="inactive">
                         <li><a href="#">All Promotions</a></li>
@@ -400,7 +405,7 @@ th, td {
                     </ul>
                 </div>
 
-                <div class="menu-item two-row">
+                <div class="menu-item two-row" style="width:100%;">
                     <h4><a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp&nbspCustomer</a></h4>
                     <ul class="inactive">
                         <li><a href="#">All Customers</a></li>
@@ -408,7 +413,7 @@ th, td {
                     </ul>
                 </div>
 
-                <div class="menu-item two-row">
+                <div class="menu-item two-row" style="width:100%;">
                     <h4><a href="#"><span class="glyphicon glyphicon-transfer"></span>&nbspShipping</a></h4>
                     <ul class="inactive">
                         <li><a href="#">Shipping Region</a></li>
@@ -416,7 +421,7 @@ th, td {
                     </ul>
                 </div>
 
-                <div class="menu-item">
+                <div class="menu-item" style="width:100%;">
                     <h4><a href="#"><span class="glyphicon glyphicon-cog"></span>&nbsp&nbspSetting</a></h4>
                 </div>
 
