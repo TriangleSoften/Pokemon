@@ -602,7 +602,7 @@ def update(request):
             <div class="col-md-10 ">
             <div style="margin-top: 35px;"></div>
 
-            <h2 class="headline">Add Product</h2>
+            <h2 class="headline">Update Product</h2>
             <hr class="break">
                             <form class="form-horizontal" form name="submit_form" id="submit_form" action="/catalog/showdata/" method="post">
                             <input type="hidden" name="id" value="'''+str(product.id)+'''" />
