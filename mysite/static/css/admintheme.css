@@ -1,0 +1,302 @@
+/* TYPOGRAPY */
+
+body {
+    background: #F5EEE0;
+    font-family: 'Ubantu', sans-serif;
+    letter-spacing: 1px;
+    color: #595959;
+}
+
+h1.headline, .h1.headline {
+  font-weight: 800px;
+  letter-spacing: 2px;
+}
+
+h2.headline, .h2.headline {
+  font-size: 32px;
+  letter-spacing: 1.5px;
+  margin-left: 20px;
+  color: #000000;
+}
+
+.text-size-12 {
+  font-size: 12px !important;
+  line-height: 1.4;
+}
+
+.text-size-15 {
+  font-size: 15px !important;
+  line-height: 1.4;
+}
+
+.text-size-16 {
+  font-size: 16px !important;
+  line-height: 1.4;
+}
+
+.text-size-20 {
+  font-size: 20px !important;
+  line-height: 1.4;
+}
+
+.text-size-25 {
+  font-size: 25px !important;
+  line-height: 1.4;
+}
+
+.text-size-36 {
+  font-size: 36px !important;
+  line-height: 1.4;
+}
+
+.text-center {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
+}
+.text-left {
+	text-align: left;
+}
+
+.text-white{
+	color: #FFFFFF;
+}
+.text-black{
+	color: #000000;
+}
+
+.text-thin{
+  font-weight: 200px;
+}
+
+/* ICON */
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+.material-icons.md-60 { font-size: 60px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+
+/* NAVBAR */
+.dropdown-menu li a:hover {
+    background-color: #FFA09E !important;
+}
+
+
+.row.content {
+  height: 650px;
+}
+
+/* SIDEBAR */
+
+.sidenav{
+	background-color: #563935;
+  height: 100%;
+}
+
+.menu-item {
+  background: #FFFFFF;
+  width: 200px; 
+  margin: -10px 0px 0px -5px; 
+}
+
+/*Menu Header Styles*/
+.menu-item h4 {
+  color: #000000;
+  font-size: 16px;
+  padding: 7px 12px 7px 12px;
+  background: #F5EEE0;
+}
+
+.menu-item h4 a {
+  color: #000000;
+  display: block;
+  text-decoration: none;
+  width: 200px;
+}
+
+.menu-item h4:hover { 
+	background: #FFA09E;
+}
+
+.active h4 {
+	background: #FFA09E;
+}
+
+.active-sub{
+  font-size: 14px;
+  line-height: 30px;
+  height: 0px;
+  list-style-type: none;
+  overflow: hidden;
+  padding: 0px;
+  margin-top: -10px;
+}
+
+.active-two-row ul{
+  height: 60px;
+}
+
+.active-three-row ul{
+  height: 90px;
+}
+
+.active-four-row ul{
+  height: 120px;
+}
+
+.active-text a{
+  color: #FFA09E;
+}
+
+/*First Item Styles*/
+.alpha p {
+	font-size: 14px;
+	letter-spacing: 0.5px;
+	padding: 8px 12px;
+	margin-top: -10px;
+	color: #595959;
+}
+
+/*Next Item Styles*/
+.inactive {
+  background: #fff;
+  font-size: 14px;
+  line-height: 30px;
+  height: 0px;
+  list-style-type: none;
+  overflow: hidden;
+  padding: 0px;
+  margin-top: -10px;
+  
+  /*Animation*/
+  -webkit-transition: height 1s ease;
+     -moz-transition: height 1s ease;
+       -o-transition: height 1s ease;
+      -ms-transition: height 1s ease;
+          transition: height 1s ease;
+}
+
+.two-row:hover ul{
+	height: 60px;
+}
+
+.three-row:hover ul {
+	height: 90px;
+}
+
+.four-row:hover ul {
+	height: 120px;
+}
+
+.menu-item ul a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #595959;
+  display: block;
+  width: 200px;
+}
+ 
+/*li Styles*/
+.menu-item li {
+  border-bottom: 1px solid #eee;
+}
+ 
+.menu-item li a:hover {
+  color: #FFA09E;
+}
+
+.home {
+  height: 500px;
+  width: 1000px;
+  align-content: center;
+  margin: 40px 45px;
+}
+
+.home ul{
+  margin: 120px;
+}
+
+
+/* Break */
+
+hr.break {
+  border-top: 1px solid #563935; 
+  display: block;
+  margin: 10px;
+}
+
+
+
+/* Button */
+
+.btn-brown {
+  color: #FFFFFF;
+  background-color: #563935;
+  border-color: #cccccc;
+}
+
+.btn-brown:hover {
+  color: #000000;
+  background-color: #FFA09E;
+  border-color: #adadad;
+}
+
+.inputfile {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 0px 0px;
+    cursor: pointer;
+}
+
+.inputfile:hover {
+  background-color:  #FFA09E;
+}
+
+input[type="file"] {
+  display: block;
+}
+
+option:hover {
+  background-color:  #FFA09E;
+}
+
+option:active {
+  background-color:  #FFA09E;
+}
