@@ -171,7 +171,7 @@
                                             var del = document.getElementById("subtotal{{obj.Pid}}").value
                                             if (del === undefined) del = 0
                                             var add = x * {{obj.Pprice}}
-                                            document.getElementById("subtotal{{obj.Pid}}").innerHTML = add
+                                            document.getElementById("subtotal{{obj.Pid}}").innerHTML = "฿"+add
                                             document.getElementById("subtotal{{obj.Pid}}").value = add
                                             calculatetotal(now, del, add)
                                             calculateShipping()
@@ -200,7 +200,7 @@
                                         var x = parseInt(now)
                                         var y = parseInt(add)
                                         var z = parseInt(del)
-                                        document.getElementById("total1").innerHTML = x+y-z
+                                        document.getElementById("total1").innerHTML = "฿"+(x+y-z)
                                         document.getElementById("total1").value = x + y - z
                                     }
                                 </script>
@@ -211,7 +211,7 @@
                                     var x = 0
                                     if (total1 < 1000) x = 100
                                     if (total1 < 500) x = 150
-                                    document.getElementById("shipping").innerHTML = x
+                                    document.getElementById("shipping").innerHTML = "฿"+x
                                     document.getElementById("shipping").value = x
                                 }
                             </script>
@@ -235,7 +235,7 @@
                                 function calculatetotal2() {
                                     var total1 = document.getElementById("total1").value
                                     var shipping = document.getElementById("shipping").value
-                                    document.getElementById("total2").innerHTML = total1 + shipping
+                                    document.getElementById("total2").innerHTML = "฿"+(total1 + shipping)
                                     document.getElementById("total2").value = total1 + shipping
                                 }
                             </script>
