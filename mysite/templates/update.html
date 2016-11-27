@@ -112,7 +112,7 @@
                         <div class="form-group">
                             <label class="control-label col-md-2 text-size-15" for="ProductID">Product ID</label>
                             <div class="col-md-3">
-                                <input type="text" name="Pid" value="{{product.Pid}}}" placeholder="Please enter product ID." style="width: 100%; height: 30px;" />
+                                <input type="text" name="Pid" value="{{product.Pid}}" placeholder="Please enter product ID." style="width: 100%; height: 30px;" />
                             </div>
                         </div>
                         <div class="form-group">
@@ -131,7 +131,7 @@
                         <div class="form-group">
                             <label class="control-label col-md-2 text-size-15" for="Price">Price </label>
                             <div class="col-md-3">
-                                <input type="text" name="Pprice" value="{{product.Pprice)}}" placeholder="Please enter product price." style="width: 100%; height: 30px;" />
+                                <input type="text" name="Pprice" value="{{product.Pprice}}" placeholder="Please enter product price." style="width: 100%; height: 30px;" />
                             </div>
                         </div>
 
@@ -164,15 +164,15 @@
                         <div class="form-group">
                             <label class="control-label col-md-2 text-size-15" for="Category">Category</label>
                             <div class="col-md-3">
-                                <input type="radio" name="Ptype" value="SkinCare" {%ifequal product.Ptype skincare %} checked {%endifequal%} /> SkinCare
+                                <input type="radio" name="Ptype" value="SkinCare" {%ifequal product.Ptype 'skincare' %} checked {%endifequal%} /> SkinCare
                                 <br />
-                                <input type="radio" name="Ptype" value="BaseMakeup" {%ifequal product.Ptype base%20makeup %} checked {%endifequal%}/> Base Makeup
+                                <input type="radio" name="Ptype" value="BaseMakeup" {%ifequal product.Ptype 'base makeup' %} checked {%endifequal%}/> Base Makeup
                                 <br />
-                                <input type="radio" name="Ptype" value="PointMakeup" {%ifequal product.Ptype point%20makeup %} checked {%endifequal%}/> Point Makeup
+                                <input type="radio" name="Ptype" value="PointMakeup" {%ifequal product.Ptype 'point makeup' %} checked {%endifequal%}/> Point Makeup
                                 <br />
-                                <input type="radio" name="Ptype" value="Accessories" {%ifequal product.Ptype accessories %} checked {%endifequal%}/> Accessories
+                                <input type="radio" name="Ptype" value="Accessories" {%ifequal product.Ptype 'accessories' %} checked {%endifequal%}/> Accessories
                                 <br />
-                                <input type="radio" name="Ptype" value="Fragrance" {%ifequal product.Ptype fragrance %} checked {%endifequal%}/> Fragrance
+                                <input type="radio" name="Ptype" value="Fragrance" {%ifequal product.Ptype 'fragrance' %} checked {%endifequal%}/> Fragrance
                             </div>
                         </div>
 
