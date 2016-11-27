@@ -48,7 +48,7 @@
                 </div>
 
                 <div class="menu-item alpha width-100">
-                    <h4><a href="home-admin.html"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Home</a></h4>
+                    <h4><a href="#"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Home</a></h4>
                     <p>Welcome Admin!!</p>
                 </div>
 
@@ -109,7 +109,7 @@
 
                 <h2 class="headline">Update Product</h2>
                 <hr class="break">
-                <form class="form-horizontal" form name="submit_form" id="submit_form" action="/catalog/showdata/" method="post">
+                <form class="form-horizontal" form name="submit_form" id="submit_form" action="/admincontrol/showdata/" method="post">
                     {% for product in productlist %}
                     <input type="hidden" name="id" value="{{product.id}}" />
                     <div class="margin-top-40">
