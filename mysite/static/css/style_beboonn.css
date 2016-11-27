@@ -41,9 +41,8 @@ footer a:hover {
 }
 
 .navbar-brand > img {
-    max-height: 100%;
     height: 100%;
-    height: 45px;
+    height: 30px;
     width: auto;
     margin: 0 auto;
 }
