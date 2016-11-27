@@ -1,0 +1,609 @@
+[33mcommit 842c4384fea8bb275c386ffad44a849defb3fbc1[m
+Author: NLito = <NLito =>
+Date:   Mon Nov 28 01:47:30 2016 +0700
+
+    hungry
+
+[33mcommit b18cddf0319899038e8db13c23fe4b371f67c25a[m
+Author: NLito = <NLito =>
+Date:   Mon Nov 28 01:23:23 2016 +0700
+
+    hot head
+
+[33mcommit 6a185a54da7f0896b39f0484a1731fc61d9d456f[m
+Author: beboonn <beboon.n@gmail.com>
+Date:   Mon Nov 28 01:20:23 2016 +0700
+
+    navbar in select
+
+[33mcommit 67197fbaf280b9efa7bbf05d9b10a46ed1133e57[m
+Author: beboonn <beboon.n@gmail.com>
+Date:   Mon Nov 28 01:16:29 2016 +0700
+
+    edit margin
+
+[33mcommit 48790539bdb0b2937c36ba30818a135b9972f26f[m
+Merge: c7a9a1a 27f4d3e
+Author: beboonn <beboon.n@gmail.com>
+Date:   Mon Nov 28 01:09:43 2016 +0700
+
+    commit อีก
+
+[33mcommit c7a9a1a1c40bd7affc1c902806008f32ac021e6f[m
+Author: beboonn <beboon.n@gmail.com>
+Date:   Mon Nov 28 01:04:16 2016 +0700
+
+    refactor jfadkf
+
+[33mcommit 27f4d3ec380801fd924272e3c54bf8dd563d0b14[m
+Author: NLito = <NLito =>
+Date:   Mon Nov 28 01:03:47 2016 +0700
+
+    cart fixed
+
+[33mcommit 3addf12dd68adab15510377a04bfa94cbe31a374[m
+Merge: 9445421 ddc32d1
+Author: NLito = <NLito =>
+Date:   Mon Nov 28 00:44:36 2016 +0700
+
+    aasfas
+
+[33mcommit ddc32d135c394b949831eea0b6feeef9e7edb1f0[m
+Author: beboonn <beboon.n@gmail.com>
+Date:   Mon Nov 28 00:41:15 2016 +0700
+
+    extract style form html code
+
+[33mcommit 94454217fd9d67192a454e0c6901d32c0251ba5d[m
+Author: NLito = <NLito =>
+Date:   Mon Nov 28 00:16:16 2016 +0700
+
+    jfgldldkff
+
+[33mcommit 8535a205f14856e807510115dbde225a47804310[m
+Author: beboonn <beboon.n@gmail.com>
+Date:   Sun Nov 27 23:03:56 2016 +0700
+
+    แก้รอบที่แล้ว
+
+[33mcommit fbaab662dddd6d2859838ef4875802f2e5d4afb4[m
+Author: beboonn <beboon.n@gmail.com>
+Date:   Sun Nov 27 23:00:08 2016 +0700
+
+    set img size in select
+
+[33mcommit 8d0bedf39ed3166ca4f56933c41e9b3a8a6d649d[m
+Author: beboonn <beboon.n@gmail.com>
+Date:   Sun Nov 27 22:50:21 2016 +0700
+
+    แยกhtml
+
+[33mcommit 57a7225cfaaa30edf6b6939058034b91fc26e9e0[m
+Author: NLito = <NLito =>
+Date:   Sun Nov 27 21:51:20 2016 +0700
+
+    fuck u photo bug
+
+[33mcommit e03f837ce92e73f2d2a2c0aca51059fea66a519e[m
+Merge: 8c80031 c6b5e19
+Author: beboonn <beboon.n@gmail.com>
+Date:   Sun Nov 27 21:41:12 2016 +0700
+
+    หืม
+
+[33mcommit 8c8003129321b69f994734e2b9231111aa687293[m
+Author: beboonn <beboon.n@gmail.com>
+Date:   Sun Nov 27 21:40:15 2016 +0700
+
+    แยกhtmlออกจากpython
+
+[33mcommit c6b5e19ea03145cacfde4b225d57ebaa467772b5[m
+Merge: f8267d7 57ebfd6
+Author: Linspin <blackspinxz@gmail.com>
+Date:   Sun Nov 27 19:36:12 2016 +0700
+
+    Merge pull request #10 from TriangleSoften/Linspin's
+    
+    update editprofile
+
+[33mcommit f8267d719249c83e7db33021ea5b67082333a6f2[m
+Author: NLito = <NLito =>
+Date:   Sun Nov 27 18:22:33 2016 +0700
+
+    cart js done
+
+[33mcommit a964c7ff6e4499ef717ffd0ea1fe123b79b0e2cc[m
+Author: NLito = <NLito =>
+Date:   Sun Nov 27 18:00:06 2016 +0700
+
+    eieeieieieieieiieeieieiei
+
+[33mcommit 3fd4b7d783e79781f9ec8313efa309368c293d45[m
+Author: beboonn <beboon.n@gmail.com>
+Date:   Sun Nov 27 17:45:10 2016 +0700
+
+    edit btn in cart
+
+[33mcommit 9ff9c3297b55553d0507c4a924f0c2fecc560ddf[m
+Author: NLito = <NLito =>
+Date:   Sun Nov 27 17:41:18 2016 +0700
+
+    js not done yet
+
+[33mcommit 240f7354e56ca551cd7596edb273829b61f16027[m
+Author: beboonn <beboon.n@gmail.com>
+Date:   Sun Nov 27 17:37:43 2016 +0700
+
+    edit admin
+
+[33mcommit 57ebfd67ec3eb5a0f3ce67f7751c628972274421[m
+Merge: e577873 0a9c949
+Author: Linspin <blackspinxz@gmail.com>
+Date:   Sun Nov 27 14:09:12 2016 +0700
+
+    Merge remote-tracking branch 'refs/remotes/origin/master' into Linspin's
+
+[33mcommit e57787336ea86ab3dc0dd4a15193c28616d38ea3[m
+Author: Linspin <blackspinxz@gmail.com>
+Date:   Sun Nov 27 14:08:54 2016 +0700
+
+    update editprofile
+
+[33mcommit 0a9c9492e8922bfd4f3cf669b6985945d0722c27[m
+Author: TropicalCode <tropicalbooranasit@gmail.com>
+Date:   Sun Nov 27 03:25:18 2016 +0700
+
+    very minor change
+
+[33mcommit ab120d5b36614f23403b439e1ef0b8344d5fd76f[m
+Author: TropicalCode <tropicalbooranasit@gmail.com>
+Date:   Sun Nov 27 03:22:05 2016 +0700
+
+    edit update product
+
+[33mcommit 5d814e1118254194bf8ad75e18d65439894dbbaa[m
+Author: TropicalCode <tropicalbooranasit@gmail.com>
+Date:   Sun Nov 27 02:39:55 2016 +0700
+
+    add product decorate
+
+[33mcommit a1de7a7ad5be8e3a9545a2eaf78004dad2ad510d[m
+Author: TropicalCode <tropicalbooranasit@gmail.com>
+Date:   Sun Nov 27 01:05:11 2016 +0700
+
+    1 change catalog view.py
+
+[33mcommit 4bb2997c704cf903819a77cf79801cd050b81d22[m
+Author: NLito = <NLito =>
+Date:   Sat Nov 26 22:34:13 2016 +0700
+
+    add baht
+
+[33mcommit bc9006eabe6543146bfb1a9de5bdd6f9e7f94009[m
+Author: NLito = <NLito =>
+Date:   Sat Nov 26 22:26:17 2016 +0700
+
+    no bomb here
+
+[33mcommit 3cad9ec3db582c7de5611f7d300fce1312f810f0[m
+Author: Yelly K <an.an.yelly@gmail.com>
+Date:   Sat Nov 26 16:42:12 2016 +0700
+
+    Add files via upload
+
+[33mcommit b8729760f77e9fa0a6d0a108d8f69c7fbc35a3ab[m
+Author: Yelly K <an.an.yelly@gmail.com>
+Date:   Sat Nov 26 16:40:04 2016 +0700
+
+    Add files via upload
+
+[33mcommit 86e3b2be47f972bd9f97ae4008916dda87ddc3d3[m
+Author: TropicalCode <tropicalbooranasit@gmail.com>
+Date:   Sat Nov 26 14:56:58 2016 +0700
+
+    addproduct original
+
+[33mcommit cbd3bab392de744d0bd0de535e3e90ff5cd7b5f4[m
+Author: NLito = <NLito =>
+Date:   Thu Nov 24 20:44:43 2016 +0700
+
+    eiei
+
+[33mcommit 1050f85f0ab2244785e1c6c57f6c5b210cd7ef77[m
+Author: NLito = <NLito =>
+Date:   Thu Nov 24 19:23:13 2016 +0700
+
+    add order tae mai ru ja sai a rai
+
+[33mcommit c2426c80e46db8a950968e6cd7dcda66d208e8bc[m
+Author: NLito = <NLito =>
+Date:   Thu Nov 24 18:12:15 2016 +0700
+
+    fucking update
+
+[33mcommit abda6251c5deb8a437d5edae8372ece2260e20fc[m
+Author: beboonn <beboon.n@gmail.com>
+Date:   Wed Nov 23 23:27:08 2016 +0700
+
+    edit hover
+
+[33mcommit e9a7fbf3a5f7fade5fd801767efdd65d23b1c21d[m
+Author: beboonn <beboon.n@gmail.com>
+Date:   Wed Nov 23 23:21:11 2016 +0700
+
+    ืทำให้ตารางสวย
+
+[33mcommit b55f03a1675e8642ccde3cc44a1b7fe2c473a03d[m
+Author: beboonn <beboon.n@gmail.com>
+Date:   Wed Nov 23 22:51:45 2016 +0700
+
+    update font again
+
+[33mcommit 9c5f1fc7625d2395d0a5b803db502e00d0a6880d[m
+Author: beboonn <beboon.n@gmail.com>
+Date:   Wed Nov 23 22:44:43 2016 +0700
+
+    change font at cart
+
+[33mcommit 641f612957eb62241a78b51e728b315bf0e92ba3[m
+Author: beboonn <beboon.n@gmail.com>
+Date:   Wed Nov 23 22:31:29 2016 +0700
+
+    remove unused file
+
+[33mcommit 7f5a233a9f3aff9c10db7b96d35c244b63ed7c9a[m
+Merge: 64b8738 b049323
+Author: napnap11 <khochapak@gmail.com>
+Date:   Wed Nov 23 18:34:39 2016 +0700
+
+    Merge pull request #9 from TriangleSoften/napnap11-addCart
+    
+    add cart
+
+[33mcommit b04932308afa6164cfe47f5806e7117d56d886a8[m
+Author: napnap11 <khochapak@gmail.com>
+Date:   Wed Nov 23 18:31:51 2016 +0700
+
+    add cart
+
+[33mcommit 64b8738e04d2ecef169a85be2e557b050b3e4baa[m
+Author: beboonn <beboon.n@gmail.com>
+Date:   Wed Nov 23 18:04:05 2016 +0700
+
+    update LOGO
+
+[33mcommit c32e893f0589535845e9188c7369b70a5e090ca0[m
+Merge: d9686ce 0908618
+Author: beboonn <beboon.n@gmail.com>
+Date:   Mon Nov 21 15:33:05 2016 +0700
+
+    add cart botton
+
+[33mcommit d9686ce3248b1b5d085a399d30325e024abeb25a[m
+Author: beboonn <beboon.n@gmail.com>
+Date:   Mon Nov 21 15:31:34 2016 +0700
+
+    add cart button
+
+[33mcommit 0908618fd1cd8184ecf95fc7a6ccab102072fd54[m
+Merge: 0d54585 e1bbcae
+Author: Linspin <blackspinxz@gmail.com>
+Date:   Mon Nov 21 14:12:42 2016 +0700
+
+    Merge pull request #8 from TriangleSoften/Linspin's
+    
+    edit Profile
+
+[33mcommit e1bbcaef9e263f1ec1338bce40887a00d859b73f[m
+Author: Linspin <blackspinxz@gmail.com>
+Date:   Mon Nov 21 14:11:15 2016 +0700
+
+    edit Profile
+
+[33mcommit 0d54585ed918ebc14723fb59d1692744d67a43c0[m
+Author: beboonn <beboon.n@gmail.com>
+Date:   Mon Nov 21 14:01:37 2016 +0700
+
+    chang LOGO
+
+[33mcommit b64756ffc47e004d8c98dcd9e17aa9de96fcf4ca[m
+Merge: 67f4567 91378a4
+Author: napnap11 <khochapak@gmail.com>
+Date:   Mon Nov 21 12:26:23 2016 +0700
+
+    Merge pull request #7 from TriangleSoften/full-u
+    
+    update lastest version
+
+[33mcommit 91378a4dadbc4914e8cdbad0a17b1fac41229154[m
+Author: napnap11 <khochapak@gmail.com>
+Date:   Mon Nov 21 12:24:31 2016 +0700
+
+    Add files via upload
+
+[33mcommit f957fed220a64d5cd8dc3c9e58179056637da9eb[m
+Author: Linspin <blackspinxz@gmail.com>
+Date:   Mon Nov 21 09:59:28 2016 +0700
+
+    setting
+
+[33mcommit 67f456760274759c0619b1831d963b4eb0cce9da[m
+Merge: 7244a94 48c8a47
+Author: Linspin <blackspinxz@gmail.com>
+Date:   Mon Nov 21 09:59:03 2016 +0700
+
+    Merge pull request #6 from TriangleSoften/Linspin's
+    
+    แยก html ออกจาก view
+
+[33mcommit f4b534c71c4ee26cf1c33abbbed4965625f5038a[m
+Author: Linspin <blackspinxz@gmail.com>
+Date:   Mon Nov 21 09:58:09 2016 +0700
+
+    settings
+
+[33mcommit 48c8a47dc6454ab2c32821de3edfece0cc130c8d[m
+Author: Linspin <blackspinxz@gmail.com>
+Date:   Mon Nov 21 09:32:26 2016 +0700
+
+    แยก html ออกจาก view
+
+[33mcommit 7244a943a65e8d08a9d07692072dba2ead3e4eeb[m
+Author: Linspin <blackspinxz@gmail.com>
+Date:   Mon Nov 21 08:52:18 2016 +0700
+
+    คืน settings
+
+[33mcommit 8b23b135ddd716a6c91eee90cafcf1d0f6d67297[m
+Merge: ba56993 6e89d28
+Author: Linspin <blackspinxz@gmail.com>
+Date:   Mon Nov 21 08:46:44 2016 +0700
+
+    Merge pull request #5 from TriangleSoften/Linspin's
+    
+    หน้า Profile
+
+[33mcommit 6e89d2884368aa434351fdebe04473a5b131d097[m
+Author: Linspin <blackspinxz@gmail.com>
+Date:   Sat Nov 19 14:38:17 2016 +0700
+
+    หน้า Profile
+
+[33mcommit ba56993e14651d80527b87c8c8f6d6b914d8b8f8[m
+Merge: 47b560e 0caa6bb
+Author: TropicalCode <tropicalbooranasit@gmail.com>
+Date:   Fri Nov 18 21:39:18 2016 +0700
+
+    Merge branch 'master' of github.com:TriangleSoften/Pokemon
+
+[33mcommit 0caa6bbca56ffae4b2773af1b819a69ea9240f4d[m
+Author: Yelly K <an.an.yelly@gmail.com>
+Date:   Fri Nov 18 21:12:02 2016 +0700
+
+    Add files via upload
+
+[33mcommit 47b560e4e44ffcb900ccde1b4ba5c070c71b02f7[m
+Author: TropicalCode <tropicalbooranasit@gmail.com>
+Date:   Fri Nov 18 20:44:52 2016 +0700
+
+    addproduct with link but plain form
+
+[33mcommit 78467f72d809feac9d9dec0edf0bccc27d6c6118[m
+Author: TropicalCode <tropicalbooranasit@gmail.com>
+Date:   Fri Nov 18 10:47:20 2016 +0700
+
+    Hello addproduct branch
+
+[33mcommit 154f9d390fd9d0b026cfca981f9d0023ddadd159[m
+Merge: 404c32e dc1592b
+Author: TropicalCode <tropicalbooranasit@gmail.com>
+Date:   Fri Nov 18 09:43:10 2016 +0700
+
+    Merge pull request #4 from watcharaphat/master
+    
+    Approve Me please
+
+[33mcommit dc1592b5c4898cb102c230e2d3d134432b7a6188[m
+Author: watcharaphat <watcharaphat.3166@gmail.com>
+Date:   Fri Nov 18 09:28:58 2016 +0700
+
+    delete all DS fil
+
+[33mcommit 2ef9451082c83aa3020bf279c2ab676c077dd418[m
+Author: watcharaphat <watcharaphat.3166@gmail.com>
+Date:   Fri Nov 18 09:23:45 2016 +0700
+
+    added gitignore and delete pyc
+
+[33mcommit 9e565186216909fd69a2c3739182e48df7db2dbd[m
+Author: TropicalCode <tropicalbooranasit@gmail.com>
+Date:   Fri Nov 18 09:03:06 2016 +0700
+
+    Test github terminal
+
+[33mcommit 404c32ed8e5a8b2889e1443eb815ab7e34e8bf2b[m
+Merge: 4bc12db 7fba881
+Author: beboonn <beboon.n@gmail.com>
+Date:   Wed Nov 16 23:02:18 2016 +0700
+
+    fixed conflict merge branch beboonn
+
+[33mcommit 4bc12dbfec2848507f9f80ab602cd10a415679c6[m
+Author: beboonn <beboon.n@gmail.com>
+Date:   Wed Nov 16 22:58:16 2016 +0700
+
+    merge branch beboonn again
+
+[33mcommit 7fba88118cf7fe3930956e34a5f996a2fb65c597[m
+Author: beboonn <beboon.n@gmail.com>
+Date:   Wed Nov 16 22:57:00 2016 +0700
+
+    finished merge with master
+
+[33mcommit 04f40030c3e4f4df87d26e7df39f210451bc3a50[m
+Merge: 470ec3d 53df67b
+Author: beboonn <beboon.n@gmail.com>
+Date:   Wed Nov 16 22:46:12 2016 +0700
+
+    marge with master
+
+[33mcommit 470ec3d8534b064197367ebb34944e0f5d83d146[m
+Author: beboonn <beboon.n@gmail.com>
+Date:   Wed Nov 16 22:41:40 2016 +0700
+
+    merge with master
+
+[33mcommit 53df67bd96d71563fb83fd991c6386e632c1ace5[m
+Merge: 48debe7 fcef0e3
+Author: beboonn <beboon.n@gmail.com>
+Date:   Wed Nov 16 22:39:15 2016 +0700
+
+    merge branch beboonn
+
+[33mcommit 48debe7625193267929f9e7206c49fb660b86044[m
+Author: beboonn <beboon.n@gmail.com>
+Date:   Wed Nov 16 22:34:35 2016 +0700
+
+    merge branch beboonn
+
+[33mcommit fcef0e388fcd3b12b8da27f25a866dc591f6077a[m
+Author: beboonn <beboon.n@gmail.com>
+Date:   Wed Nov 16 22:29:59 2016 +0700
+
+    prepare to merge branch
+
+[33mcommit be9388bf78fe50598132ba6b2e9559985c72a5ee[m
+Author: beboonn <beboon.n@gmail.com>
+Date:   Wed Nov 16 22:26:09 2016 +0700
+
+    change all UI
+
+[33mcommit 19e7ff75440df821be081771485289542020ba5b[m
+Author: beboonn <beboon.n@gmail.com>
+Date:   Wed Nov 16 22:20:53 2016 +0700
+
+    change login and register UI
+
+[33mcommit f9bca24ccd4c73c001c22792931bf10a4c7a50f6[m
+Author: beboonn <beboon.n@gmail.com>
+Date:   Wed Nov 16 19:29:16 2016 +0700
+
+    add footer , edit catalog UI
+
+[33mcommit 7dcf880328226ba3a4c886f40c0c6ea984fbb84b[m
+Author: beboonn <beboon.n@gmail.com>
+Date:   Wed Nov 16 18:48:57 2016 +0700
+
+    add hover effect
+
+[33mcommit 16fde0d2fd22efdc2b8decbf5ec16ce1dcddaa39[m
+Author: beboonn <beboon.n@gmail.com>
+Date:   Wed Nov 16 17:23:12 2016 +0700
+
+    change UI homepage
+
+[33mcommit 828e42c35c4298cac712ea5b421fd3cdbeb92a7d[m
+Merge: d172661 f60c583
+Author: beboonn <beboon.n@gmail.com>
+Date:   Tue Nov 15 23:07:01 2016 +0700
+
+    beboon commit
+
+[33mcommit d1726611191e2ea8451037f1bc37c321ecb7a20c[m
+Author: beboonn <beboon.n@gmail.com>
+Date:   Tue Nov 15 22:58:06 2016 +0700
+
+    merge branch beboonn
+
+[33mcommit f60c583b5e209e7cb86a9ea3f9be9746de660476[m
+Author: beboonn <beboon.n@gmail.com>
+Date:   Tue Nov 15 22:53:20 2016 +0700
+
+    edit navfont
+
+[33mcommit 75a60a80ffc2a16754402f868763f5cd9ee25c4c[m
+Author: beboonn <beboon.n@gmail.com>
+Date:   Tue Nov 15 22:32:39 2016 +0700
+
+    beboon eiei
+
+[33mcommit e8e07eef19ff1028f2b0330731144bdb4dbae5a9[m
+Merge: 159b1f5 18c39d0
+Author: napnap11 <khochapak@gmail.com>
+Date:   Tue Nov 15 22:12:01 2016 +0700
+
+    Merge pull request #3 from TriangleSoften/Cart
+    
+    add cart and edit catalog search
+
+[33mcommit 18c39d0f7dc342cdfe27c3c2798a32e9e9b51d2f[m
+Author: napnap11 <khochapak@gmail.com>
+Date:   Tue Nov 15 22:11:18 2016 +0700
+
+    Update catalog.html
+
+[33mcommit 8f22241afce863298013a74da4bae7ada7cdf15b[m
+Author: napnap11 <khochapak@gmail.com>
+Date:   Tue Nov 15 22:07:49 2016 +0700
+
+    Update catalog.html
+
+[33mcommit 45b728871e4e58fb0609af09dd89e4655d8f6224[m
+Author: napnap11 <khochapak@gmail.com>
+Date:   Tue Nov 15 22:00:22 2016 +0700
+
+    Update models.py
+
+[33mcommit cf7533f7c35cee36ce4fbf254c65ab5576b3d1aa[m
+Author: napnap11 <khochapak@gmail.com>
+Date:   Tue Nov 15 21:53:11 2016 +0700
+
+    Add files via upload
+
+[33mcommit 0fb0cf1fa627eaa31865a078be46128a48fe3eb3[m
+Author: beboonn <beboon.n@gmail.com>
+Date:   Tue Nov 15 21:37:38 2016 +0700
+
+    beboonn commit
+
+[33mcommit 159b1f501dfb1526d3e95dd6141d8c4c6d332479[m
+Author: beboonn <beboon.n@gmail.com>
+Date:   Tue Nov 15 21:16:39 2016 +0700
+
+    ย้ายรูปไปข้างบน
+
+[33mcommit f0d365761d8883f8f48d20c3171f67fe2ab0c8b3[m
+Author: Yelly K <an.an.yelly@gmail.com>
+Date:   Mon Nov 14 13:14:55 2016 +0700
+
+    Add files via upload
+
+[33mcommit 59b4c56989121a39dda50a0aa8cb89f80b93a19b[m
+Author: Linspin <blackspinxz@gmail.com>
+Date:   Sun Nov 13 23:05:31 2016 +0700
+
+    Update register with new table
+
+[33mcommit f4077552cc81573aae7758e060405fab0b011772[m
+Author: Linspin <blackspinxz@gmail.com>
+Date:   Mon Oct 31 09:46:49 2016 +0700
+
+    แก้ bug
+
+[33mcommit eccc423efd67816be886b6d0270906459f458429[m
+Author: Linspin <blackspinxz@gmail.com>
+Date:   Mon Oct 31 09:34:47 2016 +0700
+
+    ลืม import
+
+[33mcommit 1a930e65b86fced20b55998ff28cf4d4340a3588[m
+Author: Linspin <blackspinxz@gmail.com>
+Date:   Mon Oct 31 09:25:21 2016 +0700
+
+    แก้ login
+
+[33mcommit 381336926e606d992f2cd84cef3a69027bf03060[m
+Author: TropicalCode <tropicalbooranasit@gmail.com>
+Date:   Mon Oct 31 08:03:35 2016 +0700
+
+    ปรับปรุงบางส่วน
