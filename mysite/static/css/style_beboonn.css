@@ -357,24 +357,30 @@ footer a:hover {
     font-family: 'Slabo 27px', serif;
     position: relative;
     top: 45px;
-	background-color: #E7DFD0;
-	
+    background-color: #E7DFD0;
 }
 
 .thead-color {
-  background-color: #563935;
-  color: #f5f5f5;
+    background-color: #563935;
+    color: #f5f5f5;
 }
 
 .table-myhover:hover {
-  background-color: #F7CFC0;
-  color: #000;
+    background-color: #F7CFC0;
+    color: #000;
 }
-.btn-remove-color{
-	background: #C94451;
-	color: #FFFFFF;
+
+.btn-remove-color {
+    background: #C94451;
+    color: #FFFFFF;
 }
-.btn-remove-color:hover{
-	background: #CE0000;
-	border: 1px solid #CE6B71;
+
+.btn-remove-color:hover {
+    background: #CE0000;
+    border: 1px solid #CE6B71;
+}
+
+.btn-checkout {
+    color: #000;
+    background: #FFD4B2;
 }
