@@ -133,8 +133,8 @@
         {% if isfail %}
         <div class="alert error-box">
             <strong class="msg">Username or password incorrect.</strong> Please try again.
-            <a class="toggle-alert" href="#">Toggle</a> {% endif %}
-        </div>
+            <a class="toggle-alert" href="#">Toggle</a> 
+        </div>{% endif %}
 
         <!--    -------->
 
@@ -157,6 +157,7 @@
                     <div class="checkbox">
                         <label>
                             <input type="checkbox" name="remember_me"> Remember me</label>
+                             <a href="/login/forgot?">Forgot Password?</a>
                     </div>
                 </div>
             </div>

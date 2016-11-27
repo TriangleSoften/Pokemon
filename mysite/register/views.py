@@ -31,11 +31,11 @@ def attempt (request):
         email2 = request.POST.get("email2","")
         gender = request.POST.get("gender", "")
         phonenum = request.POST.get("phone", "")
-        dateBD = request.POST.get("dateBD", "")
+        dayBD = request.POST.get("dayBD", "")
         monthBD = request.POST.get("monthBD", "")
         yearBD = request.POST.get("yearBD", "")
 
-        dateofbirth = dateBD +"/"+ monthBD +"/"+ yearBD
+        dateofbirth = dayBD +"/"+ monthBD +"/"+ yearBD
 
         print firstname
         print lastname
