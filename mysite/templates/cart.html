@@ -18,6 +18,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../static/js/cart.js" /></script>
         <link type="text/css" rel="stylesheet" href="/static/css/style_beboonn.css">
     </head>
 
@@ -161,24 +162,7 @@
                                     </div>
                                 </td>
                                 <td class="col-sm-1 col-md-1" style="text-align: center">
-                                    <input type="number" min="1" step="1" class="form-control" id="amount{{obj.Pid}}" value="1" onchange="calculateSubtotal{{obj.Pid}}(this.value)">
-                                    <script>
-                                        function calculateSubtotal{{obj.Pid}}(val) {
-                                            var x = parseInt(val)
-											if(x>0){
-                                            var now = document.getElementById("total1").value
-                                            if (now === undefined) now = 0
-                                            var del = document.getElementById("subtotal{{obj.Pid}}").value
-                                            if (del === undefined) del = 0
-                                            var add = x * {{obj.Pprice}}
-                                            document.getElementById("subtotal{{obj.Pid}}").innerHTML = "฿"+add
-                                            document.getElementById("subtotal{{obj.Pid}}").value = add
-                                            calculatetotal(now, del, add)
-                                            calculateShipping()
-                                            calculatetotal2()
-											}
-                                        }
-                                    </script>
+                                    <input type="number" min="1" step="1" class="form-control" id="amount{{obj.Pid}}" value="1" onchange="calculateSubtotal(this.value,'{{obj.Pid}}',{{obj.Pprice}})">
                                 </td>
                                 <td class="col-sm-1 col-md-1 text-center"><strong>฿{{ obj.Pprice }}</strong></td>
                                 <td class="col-sm-1 col-md-1 text-center" id="subtotal{{obj.Pid}}"></td>
@@ -195,26 +179,7 @@
                                 <td>
                                     <h5>Subtotal</h5></td>
                                 <text>฿</text><td class="text-right" id="total1" value="0"></td>
-                                <script>
-                                    function calculatetotal(now, del, add) {
-                                        var x = parseInt(now)
-                                        var y = parseInt(add)
-                                        var z = parseInt(del)
-                                        document.getElementById("total1").innerHTML = "฿"+(x+y-z)
-                                        document.getElementById("total1").value = x + y - z
-                                    }
-                                </script>
                             </tr>
-                            <script>
-                                function calculateShipping() {
-                                    total1 = document.getElementById("total1").value
-                                    var x = 0
-                                    if (total1 < 1000) x = 100
-                                    if (total1 < 500) x = 150
-                                    document.getElementById("shipping").innerHTML = "฿"+x
-                                    document.getElementById("shipping").value = x
-                                }
-                            </script>
                             <tr class="table-myhover">
                                 <td>   </td>
                                 <td>   </td>
@@ -231,19 +196,6 @@
                                     <h3>Total</h3></td>
                                 <td class="text-right" id="total2"></td>
                             </tr>
-                            <script>
-                                function calculatetotal2() {
-                                    var total1 = document.getElementById("total1").value
-                                    var shipping = document.getElementById("shipping").value
-                                    document.getElementById("total2").innerHTML = "฿"+(total1 + shipping)
-                                    document.getElementById("total2").value = total1 + shipping
-                                }
-                            </script>
-                            {% for obj in object_list %}
-                            <script>
-                                calculateSubtotal{{obj.Pid}}(1)
-                            </script>
-                            {%endfor%}
                             <tr class="table-myhover">
                                 <td>   </td>
                                 <td>   </td>
