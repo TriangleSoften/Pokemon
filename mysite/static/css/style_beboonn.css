@@ -384,3 +384,14 @@ footer a:hover {
     color: #000;
     background: #fff;
 }
+
+
+/*-----select-----*/
+
+.img-select {
+    height: 30px;
+}
+
+.img-select img {
+    height: 100%;
+}
