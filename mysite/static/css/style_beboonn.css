@@ -388,6 +388,10 @@ footer a:hover {
 
 /*-----select-----*/
 
+.opac1 {
+    opacity: 1 !important;
+}
+
 .img-select {
     height: 50px;
 }
