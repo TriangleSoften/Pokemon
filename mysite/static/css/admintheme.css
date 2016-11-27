@@ -166,22 +166,6 @@ tr:nth-child(even) {
 
 /* NAVBAR */
 
-.dropdown-menu li a:hover {
-    background-color: #FFA09E !important;
-}
-
-.row.content {
-    height: 650px;
-}
-
-.navbar-brand {
-    max-width: 200px;
-    margin-top: 5px;
-}
-
-.navbar-right {
-    padding-right: 30px;
-}
 
 
 /* SIDEBAR */

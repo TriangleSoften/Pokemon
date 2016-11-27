@@ -380,7 +380,7 @@ footer a:hover {
     border: 1px solid #CE6B71;
 }
 
-.btn-checkout {
+.btn-checkcheck {
     color: #000;
     background: #fff;
 }
@@ -389,12 +389,7 @@ footer a:hover {
 /*-----select-----*/
 
 .img-select {
-<<<<<<< HEAD
-    height: 60px;
-	
-=======
     height: 50px;
->>>>>>> ddc32d135c394b949831eea0b6feeef9e7edb1f0
 }
 
 .img-select img {
@@ -402,7 +397,7 @@ footer a:hover {
 }
 
 .padding-right-30 {
-    padding-right: 30px;
+    padding-right: 35px;
 }
 
 .margin-top-40 {
