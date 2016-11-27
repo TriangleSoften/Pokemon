@@ -71,7 +71,7 @@ def showdata (request):
 
 def select (request):
     row = Product.objects.all()    
-        context = {
+    context = {
         "rowlist": row, 
         "title": "List",
         }
