@@ -163,7 +163,7 @@
                                 </td>
                                 <td class="col-sm-1 col-md-1" style="text-align: center">
                                     <input type="number" min="1" step="1" class="form-control" id="amount{{obj.Pid}}" value="1" onchange="calculateSubtotal(this.value,'{{obj.Pid}}',{{obj.Pprice}})">
-                                </td>
+								</td>
                                 <td class="col-sm-1 col-md-1 text-center"><strong>฿{{ obj.Pprice }}</strong></td>
                                 <td class="col-sm-1 col-md-1 text-center" id="subtotal{{obj.Pid}}"></td>
                                 <td class="col-sm-1 col-md-1">
@@ -212,6 +212,9 @@
                                     </button>
                                 </td>
                             </tr>
+							{%for obj in object_list%}
+							<script type="text/javascript" src="../static/js/cart.js" onload ="calculateSubtotal(1,'{{obj.Pid}}',{{obj.Pprice}})"></script>
+							{%endfor%}
                         </tbody>
                     </table>
                 </div>

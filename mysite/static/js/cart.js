@@ -35,5 +35,6 @@ function calculateSubtotal(val,Pid,Pprice) {
 		calculatetotal(now, del, add);
 		calculateShipping();
 		calculatetotal2();
+		
 	}
 }
