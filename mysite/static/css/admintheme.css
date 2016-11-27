@@ -171,17 +171,20 @@ tr:nth-child(even) {
 }
 
 .row.content {
-    height: 650px;
+    height: 650px !important;
 }
 
 .navbar-brand {
-    max-width: 200px;
-    margin-top: 5px;
+    max-width: 200px !important;
+    margin-top: 5px !important;
 }
 
+
+/*
 .navbar-right {
     padding-right: 30px;
 }
+*/
 
 
 /* SIDEBAR */
