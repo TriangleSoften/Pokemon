@@ -379,8 +379,7 @@ footer a:hover {
     background: #CE0000;
     border: 1px solid #CE6B71;
 }
-
-.btn-checkout {
+.btn-checkcheck {
+    background: #fff;
     color: #000;
-    background: #FFD4B2;
 }
