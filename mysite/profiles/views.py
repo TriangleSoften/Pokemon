@@ -74,6 +74,7 @@ def updatepro(request):
 
 def editpass(request):
 
+	userin=request.user.username
 	context = {
 		"user" :userin,
 		"isfail": False,

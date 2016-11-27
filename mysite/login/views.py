@@ -22,7 +22,7 @@ def index(request):
 @csrf_exempt
 def attempt(request):
 
-	if request.method == "POST":
+  if request.method == "POST":
 		useratt = request.POST.get("user", ".")
 		passatt = request.POST.get("pwd", ".")
 		if not request.POST.get('remember_me', None):
@@ -30,12 +30,12 @@ def attempt(request):
 		print(useratt)
 		print(passatt)
 
-	user = authenticate(username=useratt, password=passatt)
-	if user is not None:
+  user = authenticate(username=useratt, password=passatt)
+  if user is not None:
 		login(request, user)
         # Redirect to a success page.
 		return HttpResponseRedirect('/home/')
-	else:
+  else:
         # Return an 'invalid login' error message.
 		return HttpResponseRedirect('/login/failattempt/')
 
