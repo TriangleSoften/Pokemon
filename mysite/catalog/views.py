@@ -120,5 +120,4 @@ def delete(request):
     _id = request.GET.get('id','')
     with connection.cursor() as cursor:
          cursor.execute("DELETE FROM product where id= %s", _id)
-         
     return HttpResponseRedirect('/catalog/select/')
