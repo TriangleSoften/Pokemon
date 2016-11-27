@@ -40,6 +40,14 @@ footer a:hover {
     color: #FAFAFA !important;
 }
 
+.navbar-brand > img {
+    max-height: 100%;
+    height: 100%;
+    height: 45px;
+    width: auto;
+    margin: 0 auto;
+}
+
 .navbar-brand {
     font-size: 30px;
     position: relative;
@@ -170,11 +178,20 @@ footer a:hover {
 /*------catalog------*/
 
 .triangle-product {
-    font-family: 'PT Sans Caption', sans-serif;
+    font-family: 'Slabo 27px', serif;
+    margin-top: 45px;
 }
 
 .triangle-product span {
-    font-size: 25px;
+    font-size: 20px;
+}
+
+.triangle-eachpord {
+    height: 750px;
+}
+
+.triangle-imgpord {
+    margin-bottom: 160px;
 }
 
 .triangle-prodid {
@@ -191,8 +208,14 @@ footer a:hover {
 }
 
 .triangle-price {
+    font-family: 'Anton', sans-serif;
     color: #FFA09E;
-    font-size: 30px;
+    font-size: 30px !important;
+}
+
+.triangle-status {
+    margin-left: 80px;
+    font-size: 25px !important;
 }
 
 .sold-out {
@@ -201,6 +224,17 @@ footer a:hover {
 
 .in-stock {
     color: limegreen;
+}
+
+.btn-addtocart {
+    background: #DFA5A4;
+    font-size: 20px !important;
+    box-shadow: 0px 2px 4px 0px #B39494;
+}
+
+.btn-addtocart:hover {
+    background: #D8817E !important;
+    box-shadow: 0px 2px 4px 0px #705352;
 }
 
 
@@ -250,6 +284,11 @@ footer a:hover {
     color: #fff !important;
     background: #F8A792;
     border: 0px;
+}
+
+.form-control:focus {
+    border-color: #F7C9CB;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
 }
 
 
@@ -309,4 +348,33 @@ footer a:hover {
 
 .download-box {
     background: #a555ca url(images/download.png) no-repeat 14px 14px;
+}
+
+
+/*-----carts-----*/
+
+.triangle-cart-table {
+    font-family: 'Slabo 27px', serif;
+    position: relative;
+    top: 45px;
+	background-color: #E7DFD0;
+	
+}
+
+.thead-color {
+  background-color: #563935;
+  color: #f5f5f5;
+}
+
+.table-myhover:hover {
+  background-color: #F7CFC0;
+  color: #000;
+}
+.btn-remove-color{
+	background: #C94451;
+	color: #FFFFFF;
+}
+.btn-remove-color:hover{
+	background: #CE0000;
+	border: 1px solid #CE6B71;
 }
