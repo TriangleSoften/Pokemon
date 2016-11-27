@@ -82,9 +82,9 @@ def select (request):
 
 def update(request):
     _id = request.GET.get('id','')
-    product = Product.objects.get(id=_id)
+    productlist = Product.objects.filter(id=_id)
     context = {
-        "rowlist": product, 
+        "productlist": productlist, 
         "title": "List",
     }
         
