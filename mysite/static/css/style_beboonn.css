@@ -389,10 +389,49 @@ footer a:hover {
 /*-----select-----*/
 
 .img-select {
+<<<<<<< HEAD
     height: 60px;
 	
+=======
+    height: 50px;
+>>>>>>> ddc32d135c394b949831eea0b6feeef9e7edb1f0
 }
 
 .img-select img {
     height: 100%;
+}
+
+.padding-right-30 {
+    padding-right: 30px;
+}
+
+.margin-top-40 {
+    margin-top: 40px;
+}
+
+.select-content {
+    margin-top: 50px;
+}
+
+.addprod-form {
+    position: relative;
+    top: 100px;
+}
+
+.sidenav {
+    background-color: #563935;
+    padding-top: 2px;
+    margin-bottom: 0px;
+    padding-bottom: 15px;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.select-table {
+    width=800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
 }

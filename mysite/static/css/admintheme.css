@@ -22,6 +22,22 @@ h2.headline,
     color: #000000;
 }
 
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background-color: #bfa36d
+}
+
 .text-size-12 {
     font-size: 12px !important;
     line-height: 1.4;
@@ -170,10 +186,13 @@ h2.headline,
 
 /* SIDEBAR */
 
+
+/*
 .sidenav {
     background-color: #563935;
     height: 100%;
 }
+*/
 
 .menu-item {
     background: #FFFFFF;
@@ -354,16 +373,4 @@ option:hover {
 
 option:active {
     background-color: #FFA09E;
-}
-
-
-/*----container----*/
-
-.triangle-content {
-    margin-top: 50px;
-}
-
-.addprod-form {
-    position: relative;
-    top: 100px;
 }
