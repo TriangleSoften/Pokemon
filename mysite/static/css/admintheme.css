@@ -167,7 +167,7 @@ tr:nth-child(even) {
 /* NAVBAR */
 
 .dropdown-menu li a:hover {
-    background-color: #FFA09E !important;
+    background-color: #FFA09;
 }
 
 .row.content {

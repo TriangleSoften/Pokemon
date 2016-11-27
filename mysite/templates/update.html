@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../../static/css/admintheme.css">
 
     <link rel="shortcut icon" type="image/png" href="../../static/img/Triangle-LOGO_I.png" />
+    <link type="text/css" rel="stylesheet" href="/static/css/style_beboonn.css">
     <title>Administer - TRIANGLE</title>
 </head>
 
@@ -19,18 +20,18 @@
 
     <!--navbar-->
     <div class="container-fluid">
-        <nav class="navbar navbar-inverse navbar-fixed-top">
+        <nav class="navbar navbar-inverse navbar-fixed-top opac1">
             <div class="navbar-header">
-                <a class="navbar-brand"><img style="max-width: 200px; margin-top: -10px;" src="../../static/img/Triangle-LOGO_w2.png"></a>
+                <a class="navbar-brand pull-left"><img src="/static/img/Triangle-LOGO_w2.png"></a>
             </div>
-            <div class="navbar-right" style="padding-right: 30px;">
+            <div class="navbar-right margin-right-30">
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">WELCOME ADMIN <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#"><span class="glyphicon glyphicon-new-window"></span>&nbsp&nbspGo to Shop</a></li>
-                            <li><a href="#"><span class="glyphicon glyphicon-cog"></span>&nbsp&nbspSetting</a></li>
-                            <li><a href="#"><span class="glyphicon glyphicon-log-out"></span>&nbsp&nbspLog out</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-new-window"></span>&nbsp;&nbsp;Go to Shop</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp;Setting</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;Log out</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -40,99 +41,101 @@
 
     <!--sidebar-->
     <div class="container-fluid">
-        <div class="row content" style="margin-top: 50px;">
-            <div class="col-md-2 Sidebar" style="background-color: #563935;padding-top: 2px;margin-bottom: 0px;padding-bottom: 15px;">
+        <div class="row content select-content">
+            <div class="col-md-2 sidenav">
 
-                <div style="margin-top: 40px;">
+                <div class="margin-top-40">
                 </div>
 
-                <div class="menu-item alpha" style="width:100%;">
-                    <h4><a href="home-admin.html"><span class="glyphicon glyphicon-home"></span>&nbsp&nbspHome</a></h4>
+                <div class="menu-item alpha width-100">
+                    <h4><a href="home-admin.html"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Home</a></h4>
                     <p>Welcome Admin!!</p>
                 </div>
 
-                <div class="menu-item active active-three-row" style="width:100%;">
-                    <h4><a href="#"><span class="glyphicon glyphicon-briefcase"></span>&nbsp&nbspProduct</a></h4>
+                <div class="menu-item active active-two-row  width-100">
+                    <h4><a href="#"><span class="glyphicon glyphicon-briefcase"></span>&nbsp;&nbsp;Product</a></h4>
                     <ul class="active-sub">
                         <li><a href="./../select/">All Products</a></li>
                         <li><a style="color: #FFA09E;" href="./../addproduct/">Add Product</a></li>
-                        <li><a href="#">Out of stock</a></li>
+                        <!--                        <li><a href="#">Out of stock</a></li>-->
                     </ul>
                 </div>
 
-                <div class="menu-item four-row" style="width:100%;">
-                    <h4><a href="#"><span class="glyphicon glyphicon-th-list"></span>&nbsp&nbspOrder</a></h4>
-                    <ul class="inactive">
-                        <li><a href="#">All Orders</a></li>
-                        <li><a href="#">New Orders</a></li>
-                        <li><a href="#">Search Order</a></li>
-                        <li><a href="#">Create Invoices</a></li>
-                    </ul>
-                </div>
+                <!--
+                <div class="menu-item four-row width-100">
+    <h4><a href="#"><span class="glyphicon glyphicon-th-list"></span>&nbsp;&nbsp;Order</a></h4>
+    <ul class="inactive">
+        <li><a href="#">All Orders</a></li>
+        <li><a href="#">New Orders</a></li>
+        <li><a href="#">Search Order</a></li>
+        <li><a href="#">Create Invoices</a></li>
+    </ul>
+</div>
 
-                <div class="menu-item three-row" style="width:100%;">
-                    <h4><a href="#"><span class="glyphicon glyphicon-tags"></span>&nbsp&nbspPromotion</a></h4>
-                    <ul class="inactive">
-                        <li><a href="#">All Promotions</a></li>
-                        <li><a href="#">Add Promotions</a></li>
-                        <li><a href="#">Remove Promotions</a></li>
-                    </ul>
-                </div>
+<div class="menu-item three-row width-100">
+    <h4><a href="#"><span class="glyphicon glyphicon-tags"></span>&nbsp;&nbsp;Promotion</a></h4>
+    <ul class="inactive">
+        <li><a href="#">All Promotions</a></li>
+        <li><a href="#">Add Promotions</a></li>
+        <li><a href="#">Remove Promotions</a></li>
+    </ul>
+</div>
 
-                <div class="menu-item two-row" style="width:100%;">
-                    <h4><a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp&nbspCustomer</a></h4>
-                    <ul class="inactive">
-                        <li><a href="#">All Customers</a></li>
-                        <li><a href="#">Search Customers</a></li>
-                    </ul>
-                </div>
+<div class="menu-item two-row width-100">
+    <h4><a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Customer</a></h4>
+    <ul class="inactive">
+        <li><a href="#">All Customers</a></li>
+        <li><a href="#">Search Customers</a></li>
+    </ul>
+</div>
 
-                <div class="menu-item two-row" style="width:100%;">
-                    <h4><a href="#"><span class="glyphicon glyphicon-transfer"></span>&nbspShipping</a></h4>
-                    <ul class="inactive">
-                        <li><a href="#">Shipping Region</a></li>
-                        <li><a href="#">Add Region</a></li>
-                    </ul>
-                </div>
+<div class="menu-item two-row width-100">
+    <h4><a href="#"><span class="glyphicon glyphicon-transfer"></span>&nbsp;Shipping</a></h4>
+    <ul class="inactive">
+        <li><a href="#">Shipping Region</a></li>
+        <li><a href="#">Add Region</a></li>
+    </ul>
+</div>
 
-                <div class="menu-item" style="width:100%;">
-                    <h4><a href="#"><span class="glyphicon glyphicon-cog"></span>&nbsp&nbspSetting</a></h4>
-                </div>
+<div class="menu-item width-100">
+    <h4><a href="#"><span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp;Setting</a></h4>
+</div>
+-->
 
             </div>
 
             <div class="col-md-10 ">
-                <div style="margin-top: 35px;"></div>
+                <div class="margin-top-40"></div>
 
                 <h2 class="headline">Update Product</h2>
                 <hr class="break">
                 <form class="form-horizontal" form name="submit_form" id="submit_form" action="/catalog/showdata/" method="post">
                     {% for product in productlist %}
-					<input type="hidden" name="id" value="{{product.id}}" />
-                    <div style="margin-top: 40px;">
+                    <input type="hidden" name="id" value="{{product.id}}" />
+                    <div class="margin-top-40">
                         <div class="form-group">
                             <label class="control-label col-md-2 text-size-15" for="ProductID">Product ID</label>
                             <div class="col-md-3">
-                                <input type="text" name="Pid" value= "{{product.Pid}}" placeholder="Please enter product ID." style="width: 100%; height: 30px;" />
+                                <input class="addprod-input" type="text" name="Pid" value="{{product.Pid}}" placeholder="Please enter product ID." />
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-md-2 text-size-15" for="Name">Name</label>
                             <div class="col-md-5">
-                                <input type="text" name="Pname" value="{{product.Pname}}" placeholder="Please enter product name." style="width: 100%; height: 30px;" />
+                                <input class="addprod-img" type="text" name="Pname" value="{{product.Pname}}" placeholder="Please enter product name." />
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-md-2 text-size-15" for="Brand">Brand</label>
                             <div class="col-md-5">
-                                <input type="text" name="Pbrand" value="{{product.Pbrand}}" placeholder="Please enter product brand." style="width: 100%; height: 30px;" />
+                                <input class="addprod-img" type="text" name="Pbrand" value="{{product.Pbrand}}" placeholder="Please enter product brand." />
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label class="control-label col-md-2 text-size-15" for="Price">Price </label>
                             <div class="col-md-3">
-                                <input type="text" name="Pprice" value="{{product.Pprice}}" placeholder="Please enter product price." style="width: 100%; height: 30px;" />
+                                <input class="addprod-img" type="text" name="Pprice" value="{{product.Pprice}}" placeholder="Please enter product price." />
                             </div>
                         </div>
 
@@ -149,6 +152,7 @@
                             <label class="control-label col-md-2 text-size-15" for="Descript">Description</label>
                             <div class="col-md-5">
                                 <textarea id="description" rows="10" cols="50" name="Pdetail" value="{{product.Pdetail}}" placeholder="Please enter product detail."></textarea>
+                                <!--
                                 <style>
                                     .userInput {
                                         text-align: left;
@@ -159,13 +163,14 @@
                                         vertical-align: top;
                                     }
                                 </style>
+-->
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label class="control-label col-md-2 text-size-15" for="Category">Category</label>
                             <div class="col-md-3">
-                                <input type="radio" name="Ptype" value="SkinCare"{%ifequal product.Ptype 'Skincare' %}checked{%endifequal%} /> SkinCare
+                                <input type="radio" name="Ptype" value="SkinCare" {%ifequal product.Ptype 'Skincare' %}checked{%endifequal%} /> SkinCare
                                 <br />
                                 <input type="radio" name="Ptype" value="BaseMakeup" {%ifequal product.Ptype 'Base Makeup' %} checked {%endifequal%}/> Base Makeup
                                 <br />
@@ -180,7 +185,7 @@
                         <div class="form-group">
                             <label class="control-label col-md-2 text-size-15" for="Image">Product image</label>
                             <div class="col-md-3">
-                                <input type="text" name="Ppicture" value="{{product.Ppicture}}" placeholder="Please enter link of product picture." style="width: 100%; height: 30px;" />
+                                <input class="input-img" type="text" name="Ppicture" value="{{product.Ppicture}}" placeholder="Please enter link of product picture." />
                             </div>
                         </div>
 
@@ -192,7 +197,7 @@
                             </div>
                         </div>
                     </div>
-					{% endfor%}
+                    {% endfor%}
                 </form>
             </div>
 

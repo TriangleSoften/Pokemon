@@ -409,7 +409,9 @@ footer a:hover {
 }
 
 .select-content {
-    margin-top: 50px;
+    /*    margin-top: 50px;
+    */
+    padding-top: 50px;
 }
 
 .addprod-form {
@@ -419,9 +421,18 @@ footer a:hover {
 
 .sidenav {
     background-color: #563935;
-    padding-top: 2px;
-    margin-bottom: 0px;
-    padding-bottom: 15px;
+    /*    padding-top: 2px;*/
+    /*    margin-bottom: 0px;*/
+    /*    padding-bottom: 15px;*/
+    /*    height: 100%;*/
+    /*    margin-bottom: -5000px;*/
+    /* any large number will do */
+    /*    padding-bottom: 5000px;*/
+    height: 1500px;
+    /*
+    margin-bottom: -101%;
+    padding-bottom: 101%;
+*/
 }
 
 .width-100 {

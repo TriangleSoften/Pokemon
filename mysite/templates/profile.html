@@ -131,6 +131,67 @@
         </div>
         <br>
         <div class="container">
+            <form class="form-horizontal login-form" method="post" name="submit_form" id="submit_form" action="/profile/updatepro/">
+
+
+                <!--               ------------>
+
+
+                <div class="form-group">
+                    <label class="control-label col-xs-2" for="username">Username:</label> 
+                    <div class="col-xs-2">
+                        <input type="text" class="form-control" name="username" id="username" value="{{ data.username }}" readonly>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-xs-2" for="firstName">First Name:</label> 
+                    <div class="col-xs-2">
+                        <input type="text" class="form-control" name="firstName" id="firstName" value="{{ firstname }}" readonly>
+                    </div>
+                    
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-xs-2" for="lastName">Last Name:</label>
+                    <div class="col-xs-2">
+                        <input type="text" class="form-control" name="lastName" id="lastName" value="{{ lastname }}" readonly>
+                    </div>
+                </div>                
+
+                <div class="form-group">
+                    <label class="control-label col-xs-2" for="email">Email Address:</label> 
+                    <div class="col-xs-2">
+                        <input type="text" class="form-control" name="email" id="email" value="{{ email }}" readonly>
+                    </div>
+                    
+                </div>
+
+            
+
+                <div class="form-group">
+                    <label class="control-label col-xs-2" for="gender">Gender:</label> 
+                    <div class="col-xs-2">
+                        <input type="text" class="form-control" name="gender" id="gender" value="{{ data.gender }}" readonly>
+                    </div>
+                    
+                </div>            
+
+                <div class="form-group">
+                    <label class="control-label col-xs-2" for="phone">Phone Number:</label>
+                    <div class="col-xs-2">
+                        <input type="text" class="form-control" name="phone" id="phone" value="{{ data.phonenum }}" readonly>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-xs-2" for="address">Address:</label>
+                    <div class="col-xs-3">
+                        <textarea class="form-control" rows="3" name="address" id="address" value="{{ data.address }}" readonly>{{ data.address }}</textarea>
+                    </div>
+                </div>                
+            </form>
+            <!--
             <span class="username">Username : </span>{{ data.username }}<br>
             <span class="userFirstname">Firstname : </span>{{ firstname }}<br>
             <span class="userLastname">Lastname : </span>{{ lastname }}<br>
@@ -138,7 +199,7 @@
             <span class="userGender">Gender : </span>{{ data.gender }}<br>
             <span class="userBD">Date of Birth : </span>{{ data.dateofbirth }}<br>
             <span class="userphoneno">Phone Number : </span>{{ data.phonenum }}<br>
-            <span class="userAddress">Address : </span>{{ data.address }}<br>
+            <span class="userAddress">Address : </span>{{ data.address }}<br> -->
         </div>
         {% endfor %}
         <div class="form-group">
